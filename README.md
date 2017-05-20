@@ -1,5 +1,5 @@
 
-# Fraud detection Machine Learning on Enron Enteprise Dataset
+# Fraud Detection Machine Learning on Enron Enteprise Dataset
 
 ## Introduction
 
