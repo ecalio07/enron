@@ -3,7 +3,7 @@
 
 ## 1. Introduction
 
-The purpose of this project is to provide an reproducible paper on stududies how well Naive Bayes, SVM, and Decision Tree machine learning algorithms can indentify emails by their authors using a pre-processed list of email texts and the corresponding authors based on Enron dataset, comprised of 146 users with 21 features each.
+The purpose of this project is to provide a reproducible paper on stududies how well Naive Bayes, SVM, and Decision Tree machine learning algorithms can indentify emails by their authors using a pre-processed list of email texts and the corresponding authors based on Enron dataset, comprised of 146 users with 21 features each.
 
 ## 2. Structure and Files
 
