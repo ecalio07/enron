@@ -15,9 +15,11 @@ Directories and Files explanation:
 
 **Deliver:** Contains the stable reproducible papers.
 
-To reproduce this experiment, you will find the main file (last version of .ypnp) in this folder . The delivery file will contain all instructions, and it will be regarded as our reproducible paper. By papaer I mean not only the text, but data, code, and all resources required to make the experiments reproducible. 
-
 **Environment:** Contains DOCKER version, an alternative way to reproduce the experiments without having to set up installation of tools by yourself. 
+
+**Figures:** Contains image files imported and displayed by the main files.
+
+To reproduce this experiment, you will find the main file (last version of .ypnp) in this folder . The delivery file will contain all instructions, and it will be regarded as our reproducible paper. By papaer I mean not only the text, but data, code, and all resources required to make the experiments reproducible. 
 
 **Tools:** Contains the auxiliary commom .py files imported by main scripts embeded in the papers.
 
