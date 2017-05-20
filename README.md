@@ -23,7 +23,7 @@ Directories and Files explanation:
 
 **Data:** The dataset files are named **email_authors.pkl** and **word_data** which has been developed by Katie Malone for Udacity machine learning training course.
 
-**Dev:** In this directory you made available minor releases of our reproducible papers using jupyter notebook. Code scripts and text procedures are embeded in the ipynb files. Please, note that this has been made available only to display the evolution of the project. For the most stable verstion, please refer to files contained in the **Deliver** folder.
+**Dev:** In this directory it is available minor releases of our reproducible papers using jupyter notebook. Code scripts and text procedures are embeded in the ipynb files. Please, note that this has been made available only to display the evolution of the project. For the most stable verstion, please refer to files contained in the **Deliver** folder.
 
 **Deliver:** Contains the stable reproducible papers.
 
