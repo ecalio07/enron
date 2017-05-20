@@ -14,7 +14,7 @@ By following instructions in the file contained in the **deliver**, you will be 
 ### 2. Docker tool
 By following instructions in the file contained in the **deliver**, you will be able to install docker client tool, and make use of the docker file available in the **environments** folder. When running the experiment, you will still be using Jupyter Notebook as the main tool, however, the difference now is that you won't have to install python, java, and jupyter notebook, for they will be embeded in the docker file and be ready to use.
 
-**NB:** All contents used for this paper where based on the **"Udacity - Introduction to Machine Leaning course"**, and it is being used for educational pourposes only.
+**NB:** All contents used for this paper where based on the **"Udacity - Introduction to Machine Leaning course"**, and were adaped according to the goals explained here. This is being used for **educational pourposes only**.
 
 
 ## Structure and Files
