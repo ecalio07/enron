@@ -25,7 +25,7 @@ Directories and Files explanation:
 
 **Dev:** In this directory it is available minor releases of our reproducible papers using jupyter notebook. Code scripts and text procedures are embeded in the ipynb files. Please, note that this has been made available only to display the evolution of the project. For the most stable verstion, please refer to files contained in the **Deliver** folder.
 
-**Deliver:** Contains the stable reproducible papers.
+**Deliver:** Contains the stable reproducible papers. It is here that the main reproducible paper is encountered.
 
 **Environment:** Contains DOCKER version, an alternative way to reproduce the experiments without having to set up installation of tools by yourself. 
 
