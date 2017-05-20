@@ -1,13 +1,13 @@
 
-# Fraud detection machine learning on Enron enteprise dataset
+# Fraud detection machine learning on Enron Enteprise Dataset
 
 ## Introduction
 
-The purpose of this project is to provide a **reproducible paper** regarding studies on how well Naive Bayes, SVM, and Decision Tree machine learning algorithms can indentify emails by their authors using a pre-processed list of email texts and the corresponding authors based on Enron dataset, comprised of 146 users with 21 features each.
+The purpose of this project is to provide a **reproducible paper** regarding studies on how well Naive Bayes, SVM, and Decision Tree machine learning algorithms can indentify emails by their authors using a pre-processed list of email texts and the corresponding authors based on the text dataset(comprised of 146 users with 21 features each) of the famous fraud scandal of the american bankrupt Enron Corporation.
 
 ## Reprodutibility
 This project can be reproduced in two distinct manners.
-
+or
 ### 1. Jupyter Notebook tool
 By following instructions in the file contained in the **deliver**, you will be able to setup the proper environment on your local machine, and install and use Jupyter Notebook as your main tool.
 
