@@ -4,10 +4,12 @@
 ## Introduction
 The purpose of this project is to provide a **reproducible paper** regarding studies on how well Naive Bayes, SVM, and Decision Tree machine learning algorithms can indentify emails by their authors using a pre-processed list of email texts and the corresponding authors based on the text dataset(comprised of 146 users with 21 features each) of the famous fraud scandal of the american bankrupt Enron Corporation.
 
+**NB:** All contents used for this paper where based on the **"Udacity - Introduction to Machine Leaning course"**, and were adaped according to the goals explained here. This is being used for **educational pourposes only**.
+
 ## Environment
 This project essencially makes use of the following tools:
 * Docker and Jupyter Notebook
-* Python Scripts using Naive Bayes, SVM and Decision Tree classifiers.
+* Python Scripts
 * Scikit-learn libraries
 
 ## Structure and Files for Reprodutibility
@@ -23,12 +25,10 @@ Please, note that this has been made available only to display the evolution of 
 
 **Figures:** Contains image files imported and displayed by the main files.
 
-To reproduce this experiment, you will find the main file (last version of .ypnp) in this folder . The delivery file will contain all instructions, and it will be regarded as our reproducible paper. By papaer I mean not only the text, but data, code, and all resources required to make the experiments reproducible. 
-
 **Tools:** Contains the auxiliary commom .py files imported by main scripts embeded in the papers.
 
 
-**NB:** All contents used for this paper where based on the **"Udacity - Introduction to Machine Leaning course"**, and were adaped according to the goals explained here. This is being used for **educational pourposes only**.
+
 
 
 
