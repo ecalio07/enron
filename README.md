@@ -2,22 +2,15 @@
 # Fraud Detection Machine Learning on Enron Enteprise Dataset
 
 ## Introduction
-
 The purpose of this project is to provide a **reproducible paper** regarding studies on how well Naive Bayes, SVM, and Decision Tree machine learning algorithms can indentify emails by their authors using a pre-processed list of email texts and the corresponding authors based on the text dataset(comprised of 146 users with 21 features each) of the famous fraud scandal of the american bankrupt Enron Corporation.
 
 ## Environment
 This project essencially makes use of the following tools:
 * Docker and Jupyter Notebook
-* Scripts are written in python
+* Python Scripts using Naive Bayes, SVM and Decision Tree classifiers.
 * Scikit-learn libraries
 
-**NB:** All contents used for this paper where based on the **"Udacity - Introduction to Machine Leaning course"**, and were adaped according to the goals explained here. This is being used for **educational pourposes only**.
-
-
 ## Structure and Files for Reprodutibility
-
-Directories and Files explanation:
-
 **Data:** The dataset files are named **email_authors.pkl** and **word_data** which has been developed by Katie Malone for Udacity machine learning training course.
 
 **Dev:** In this directory it is available minor releases of our reproducible papers using jupyter notebook. Scripts and text procedures are embeded in the **.ipynb files**. 
@@ -34,7 +27,9 @@ To reproduce this experiment, you will find the main file (last version of .ypnp
 
 **Tools:** Contains the auxiliary commom .py files imported by main scripts embeded in the papers.
 
-<img src="structure.png" />
+
+**NB:** All contents used for this paper where based on the **"Udacity - Introduction to Machine Leaning course"**, and were adaped according to the goals explained here. This is being used for **educational pourposes only**.
+
 
 
 
