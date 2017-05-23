@@ -17,20 +17,23 @@ This project essencially makes use of the following tools:
 * Scikit-learn libraries
 
 ## Structure and Files for Reprodutibility
-**Data:** The dataset files are named **email_authors.pkl** and **word_data** which has been developed by Katie Malone for Udacity machine learning training course.
 
-**Dev:** In this directory it is available minor releases of our reproducible papers using jupyter notebook. Scripts and text procedures are embeded in the **.ipynb files**. 
+The sctructure here in GitHub is the same one you must have in jupyter notebook. Please, find explanation below:
+
+**data:** The dataset files are named **email_authors.pkl** and **word_data** which has been developed by Katie Malone for Udacity machine learning training course.
+
+**dev:** In this directory it is available minor releases of our reproducible papers using jupyter notebook. Scripts and text procedures are embeded in the **.ipynb files**. 
 
 Please, note that this has been made available only to display the evolution of the project. For the most stable verstion, please refer to files contained in the **Deliver** folder.
 
-**Deliver:** Refer to the most recent **.ipynb** file in this folder as the main stable reproducible paper:<br>
+**deliver:** Refer to the most recent **.ipynb** file in this folder as the main stable reproducible paper:<br>
 
 
-**Environment:** Contains DOCKER version, an alternative way to reproduce the experiments without having to set up installation of tools by yourself. 
+**environment:** Contains DOCKER version, an alternative way to reproduce the experiments without having to set up installation of tools by yourself. 
 
-**Figures:** Contains image files imported and displayed by the main files.
+**figures:** Contains image files imported and displayed by the main files.
 
-**Tools:** Contains the auxiliary commom .py files imported by main scripts embeded in the papers.
+**tools:** Contains the auxiliary commom .py files imported by main scripts embeded in the papers.
 
 
 
