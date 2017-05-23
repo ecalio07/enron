@@ -23,7 +23,8 @@ This project essencially makes use of the following tools:
 
 Please, note that this has been made available only to display the evolution of the project. For the most stable verstion, please refer to files contained in the **Deliver** folder.
 
-**Deliver:** Refer to the file in this folder as the main stable reproducible paper. 
+**Deliver:** Refer to the most recent **.ipynb** file in this folder as the main stable reproducible paper:<br>
+
 
 **Environment:** Contains DOCKER version, an alternative way to reproduce the experiments without having to set up installation of tools by yourself. 
 
