@@ -1,16 +1,7 @@
-# Fraud Detection Machine Learning on Enron Enteprise Dataset
+# Reproduction Environment with Docker Image
 
-## Introduction
-
-The purpose of this project is to provide a reproducible paper regarding studies on how well Naive Bayes, SVM, and Decision Tree Machine Learning Algorithms can indentify emails by their authors using a pre-processed list of email texts and the corresponding authors based on the text dataset(comprised of 146 users with 21 features each) of the famous fraud scandal of the american bankrupt Enron Corporation. We will also study ways to work with parameters to improve accuracy and performance.
-
-**NB:** All contents and instructions used for this paper where based on the **"Udacity - Introduction to Machine Leaning course"**, and were adaped according to the goals explained here. This is being used for **educational pourposes only**.
-
-For more information on the history of the coorporation, please verify the link below: 
-http://www.investopedia.com/updates/enron-scandal-summary/
-
-## Environment
-This project essencially makes use of the following tools:
-* Docker and Jupyter Notebook
-* Python Scripts
-* Scikit-learn libraries
+## Steps:
+* 1 - Install Docker on Ubuntu 16.04: https://www.docker.com/community-edition#/download /
+* 2 - Open terminal and issue the command: sudo docker run -d -p 8888:8888 -v /home/vik/notebooks:/home/ds/notebooks ecalio07/ia369z1:1.0 
+* 3 - Open the browser and enter the following url to access jupyter notebook: http://localhost:8888/
+* 4 - Refer to the .ipynb file in GitHub folder (ecalio07/enron-paper/deliver) to reproduce the project.
