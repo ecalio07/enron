@@ -1,0 +1,11 @@
+
+1. Instalar docker no ubuntu 16.04
+2. Executar os comandos abaixo no terminal:
+ a. sudo docker pull dataquestio/python2-starter
+ b. docker run -d -p 8888:8888 -v /home/vik/notebooks:/home/ds/notebooks dataquestio/python2-starter
+ c. rode o notebook no browser e inclua seus diretórios e arquivos.
+ c. sudo docker commit <id container que está rodando> ecalio07/ia369z1:1.0 // cria uma nova imagem com o nome+tag =  ecalio07/ia369z1:1.0
+ d. sudo docker stop  <id container>
+ e. sudo docker run -d -p 8888:8888 -v /home/vik/notebooks:/home/ds/notebooks ecalio07/ia369z1:1.0 
+ f. sudo docker login --username=ecalio07 --email=ecalio07@gmail.com
+ g. sudo docker push ecalio07/ia369z1:1.0
