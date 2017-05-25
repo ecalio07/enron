@@ -11,7 +11,7 @@ Também consta dificuldades encontradas, recomendações e passos que podem ser 
 ### Observações:
 No início comecei instalando cada ferramenta individualmente (git, python, jupyter) mas depois cheguei a conclusão que é perda de tempo. Salvo casos mais específicos, eu  indico a instalação direta do Anaconda, que contém todas as ferramentas necessárias neste projeto, inclusive a biblioteca scikit-learn. 
  
-### Passos para reproduzir o experimento:
+### Passos para para configurar este ambiente:
 1. Download and Install Anaconda 4.3.1 for Python 2.7.13. https://www.continuum.io/downloads . Anaconda will include all packages necessary for this experiment: git, python 2.7, scikit-learn and jupyter notebook.
 2. After installation close the terminal and start a new one.
 3. Create a new folder: **mkdir /home/youruser/notebooks**
@@ -21,12 +21,14 @@ No início comecei instalando cada ferramenta individualmente (git, python, jupy
 6. Still in the direcotry from step 5, execute: **jupyter notebook**
 7. Reproduce the experiments following .ipynb file within deliver directory
 
+Obs: Para windows são os mesmos passos, mudando somente a estrutura de diretórios.
+
 ## 2 - REPRODUÇÃO NO WINDOWS/UBUNTU VIA VIRTUALBOX:
  
 ### Observações:
 Encontrei vários erros de compatibilidade e perdi muito tempo tentando reproduzir o experimento via Docker no Windows. Sendo assim, a maneira mais eficaz foi criar uma Virtual Machine com SO Ubuntu, mas criada contemplando os exatos procedimentos de instalação da sessão “1.) Reprodução no Ubuntu/Windows via Anaconda”. Contudo, antes de começar os testes, verifique se os arquivos locais da VM estão atualizados com o repositório git.
  
-### Passos para reproduzir o experimento:
+### Passos para para configurar este ambiente:
 1. Caso não possua a instalação do VirtualBox, favor instale conforme url:
 https://www.virtualbox.org/wiki/Downloads
 2. Inicialize o Oracle Virtual Machine e no meu Arquivo/Importar Appliance, selecione o arquivo com extensão *.OVA (contido na pasta environments do projeto).
@@ -54,7 +56,7 @@ O teste da reprodutibilidade foi instalar somente o docker em uma máquina ubunt
  
 Conclui então que como a diferença da imagem original para a que eu havia alterado era apenas os dados (.ipynb, py files), resolvi não mais criar imagem nova e armazená-la no Docker Hub, mas simplesmente utilizar a imagem já existente juntamente com os dados do meu projeto clonados do GitHub. 
  
-### Passos para reproduzir o experimento:
+### Passos para para configurar este ambiente:
 1. If you don´t have docker client, please install:
 https://store.docker.com/editions/community/docker-ce-server-ubuntu
 2. Baixe a imagem pública: **sudo docker pull dataquestio/python2-starter**
