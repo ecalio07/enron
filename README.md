@@ -35,7 +35,7 @@ Please, note that this has been made available only to display the evolution of 
 
 **tools:** Contains the auxiliary commom .py files imported by main scripts embeded in the papers.
 
-<img src="../figures/structure.png" />
+<img src="/figures/structure.png" />
 
 
 
