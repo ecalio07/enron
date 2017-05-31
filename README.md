@@ -37,7 +37,9 @@ Please, note that this has been made available only to display the evolution of 
 
 <img src="/figures/structure.png" />
 
+## Workflow Overview
 
+<img src="../figures/workflow-a.png" />
 
 
 
