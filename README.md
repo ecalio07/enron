@@ -37,7 +37,7 @@ Please, note that this has been made available only to display the evolution of 
 
 <img src="/figures/structure.png" />
 
-## Workflow Overview
+## Overview of the Experiment: Inputs and Outputs
 
 <img src="/figures/workflow-a.png" />
 
