@@ -39,7 +39,7 @@ Please, note that this has been made available only to display the evolution of 
 
 ## Workflow Overview
 
-<img src="../figures/workflow-a.png" />
+<img src="/figures/workflow-a.png" />
 
 
 
