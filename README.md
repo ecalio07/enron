@@ -24,10 +24,7 @@ The files sctructure in GitHub is the same one to have in jupyter notebook:
 
 * /dev: In this directory it is available **.ipynb files** that are imported by the main file in deliver folder
 
-Please, note that this has been made available only to display the evolution of the project. For the most stable verstion, please refer to files contained in the **Deliver** folder.
-
 * /deliver: Refer to the most recent **.ipynb** file in this folder as the main stable reproducible paper:<br>
-
 
 * /environment: Contains DOCKER version, an alternative way to reproduce the experiments without having to set up installation of tools by yourself. 
 
