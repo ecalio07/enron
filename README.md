@@ -16,11 +16,11 @@ This project essencially makes use of the following tools:
 * Python Scripts
 * Scikit-learn libraries
 
-## Structure and Files for Reprodutibility
+## Files Structure
 
-The sctructure here in GitHub is the same one you must have in jupyter notebook. Please, find explanation below:
+The sctructure here in GitHub is the same one to have in jupyter notebook:
 
-**data:** The dataset files are named **email_authors.pkl** and **word_data** which has been developed by Katie Malone for Udacity machine learning training course.
+* /data: Holds the dataset files (email_authors.pkl and  word_data), preprocessed by Katie Malone for Udacity machine learning training course.
 
 **dev:** In this directory it is available **.ipynb files** that are imported by the main file in deliver folder
 
@@ -34,8 +34,6 @@ Please, note that this has been made available only to display the evolution of 
 **figures:** Contains image files imported and displayed by the main files.
 
 **tools:** Contains the auxiliary commom .py files imported by main scripts embeded in the papers.
-
-<img src="/figures/structure.png" />
 
 ## Overview of the Experiment: Inputs and Outputs
 
