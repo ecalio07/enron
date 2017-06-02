@@ -16,9 +16,9 @@ This project essencially makes use of the following tools:
 * Python Scripts
 * Scikit-learn libraries
 
-## Files Structure
+## Structure
 
-The sctructure here in GitHub is the same one to have in jupyter notebook:
+The files sctructure in GitHub is the same one to have in jupyter notebook:
 
 * /data: Holds the dataset files (email_authors.pkl and  word_data), preprocessed by Katie Malone for Udacity machine learning training course.
 
