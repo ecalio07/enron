@@ -22,7 +22,7 @@ The sctructure here in GitHub is the same one you must have in jupyter notebook.
 
 **data:** The dataset files are named **email_authors.pkl** and **word_data** which has been developed by Katie Malone for Udacity machine learning training course.
 
-**dev:** In this directory it is available minor releases of our reproducible papers using jupyter notebook. Scripts and text procedures are embeded in the **.ipynb files**. 
+**dev:** In this directory it is available **.ipynb files** that are imported by the main file in deliver folder
 
 Please, note that this has been made available only to display the evolution of the project. For the most stable verstion, please refer to files contained in the **Deliver** folder.
 
@@ -39,7 +39,7 @@ Please, note that this has been made available only to display the evolution of 
 
 ## Overview of the Experiment: Inputs and Outputs
 
-<img src="/figures/workflow-a.png" />
+<img src="/figures/workflow.png" />
 
 
 
