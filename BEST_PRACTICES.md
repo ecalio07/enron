@@ -24,6 +24,21 @@ No início comecei instalando cada ferramenta individualmente (git, python, jupy
 Obs: Para windows são os mesmos passos, mudando somente a estrutura de diretórios.
 
 ## 2 - (OPCIONAL) REPRODUÇÃO NO UBUNTU VIA DOCKER:
+
+Fiz testes no ambiente windows com esta imagem, mas funcionou somente para Linux.
+
+### Passos para para configurar este ambiente:
+1. If you don´t have docker client, please install:
+https://store.docker.com/editions/community/docker-ce-server-ubuntu
+2. Baixe a imagem pública: **sudo docker pull dataquestio/python2-starter**
+3. Rode a imagem para criar o container: **docker run -d -p 8888:8888 -v /home/vik/notebooks:/home/ds/notebooks dataquestio/python2-starter**
+4. Enter into the following directory: **cd /home/vik/notebooks**
+5. Clone the project from GitHub: **git clone https://github.com/ecalio07/enron-paper.git**
+6. Agora, os arquivos precisam ser copiados do diretório /home/vik/notebooks/enron-paper (arquivos locais) para o diretório dentro do docker /home/ds/notebooks. Isto pode ser feito de duas maneira:
+6.1. Via comando cp
+6.2. Ou acessando o jupyter localhost:8888 via browser, criando pastas(dev, deliver, figures, data) e fazendo o upload dos arquivos locais(/home/vik/notebooks/enron-paper).
+7. Agora, jupyter no browser, basta acessar o arquivo contido na pasta deliver e seguir as instruções do paper.
+
  
 ### Observações:
 Para não iniciar instalação do ambiente reprodutível do zero, tendo que criar uma imagem e instalar cada ferramenta individualmente, aconselho a instalação do docker cliente e em seguida fazer o pull da imagem dataquestio/python2-starter, pois ela já contempla todo o ambiente integrado do anaconda. 
@@ -63,19 +78,6 @@ Assim, basta ter o VirtualBox 5.0 ou superior instalado no Windows, ou até mesm
 
 # OBSERVAÇÕES
  
-### Passos para para configurar este ambiente:
-1. If you don´t have docker client, please install:
-https://store.docker.com/editions/community/docker-ce-server-ubuntu
-2. Baixe a imagem pública: **sudo docker pull dataquestio/python2-starter**
-3. Rode a imagem para criar o container: **docker run -d -p 8888:8888 -v /home/vik/notebooks:/home/ds/notebooks dataquestio/python2-starter**
-4. Enter into the following directory: **cd /home/vik/notebooks**
-5. Clone the project from GitHub: **git clone https://github.com/ecalio07/enron-paper.git**
-6. Agora, os arquivos precisam ser copiados do diretório /home/vik/notebooks/enron-paper (arquivos locais) para o diretório dentro do docker /home/ds/notebooks. Isto pode ser feito de duas maneira:
-6.1. Via comando cp
-6.2. Ou acessando o jupyter localhost:8888 via browser, criando pastas(dev, deliver, figures, tools, data) e fazendo o upload dos arquivos locais(/home/vik/notebooks/enron-paper).
-7. Agora, jupyter no browser, basta acessar o arquivo contido na pasta deliver e seguir as instruções do paper.
-
-
 ### SOBRE JUPYTER NOTEBOOK
  
 No início tive algumas dificuldades para trabalhar com a parte textual do notebook. Depois descobri que é na verdade simples, bastando apenas utilizar a célula como tipo markdown para inserir textos.
