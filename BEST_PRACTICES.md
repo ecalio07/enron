@@ -23,15 +23,29 @@ No início comecei instalando cada ferramenta individualmente (git, python, jupy
 
 Obs: Para windows são os mesmos passos, mudando somente a estrutura de diretórios.
 
-## 2 - REPRODUÇÃO NO WINDOWS/UBUNTU VIA VIRTUALBOX:
+## 2 - (OPCIONAL) REPRODUÇÃO NO UBUNTU VIA DOCKER:
+ 
+### Observações:
+Para não iniciar instalação do ambiente reprodutível do zero, tendo que criar uma imagem e instalar cada ferramenta individualmente, aconselho a instalação do docker cliente e em seguida fazer o pull da imagem dataquestio/python2-starter, pois ela já contempla todo o ambiente integrado do anaconda. 
+ 
+Sendo assim, baixei a imagem dataquestio/python2-starter, iniciei o notebook e montei a estrutura do github. O projeto funcionou perfeitamente. Então, fiz o commit com um novo nome e push para minha conta no Docker Hub.
+ 
+O teste da reprodutibilidade foi instalar somente o docker em uma máquina ubuntu que não tivesse nenhuma outra ferramenta e-science. Assim, baixei a imagem do Docker Hub e inicializei o notebook. Mas para minha surpresa, ele não continha nenhum dos dados que eu havia acrescentado. Acredito que meu erro foi não ter entendido que ele salva na imagem as instalações e configurações, mas não tais tipos de dados.
+ 
+Conclui então que como a diferença da imagem original para a que eu havia alterado era apenas os dados (.ipynb, py files), resolvi não mais criar imagem nova e armazená-la no Docker Hub, mas simplesmente utilizar a imagem já existente juntamente com os dados do meu projeto clonados do GitHub. 
+
+## 3 - (OPCIONAL) REPRODUÇÃO NO WINDOWS/UBUNTU VIA VIRTUALBOX:
  
 ### Observações:
 Encontrei vários erros de compatibilidade e perdi muito tempo tentando reproduzir o experimento via Docker no Windows. Sendo assim, a maneira mais eficaz foi criar uma Virtual Machine com SO Ubuntu, mas criada contemplando os exatos procedimentos de instalação da sessão “1.) Reprodução no Ubuntu/Windows via Anaconda”. Contudo, antes de começar os testes, verifique se os arquivos locais da VM estão atualizados com o repositório git.
+
+Esta opção talvez não seja a melhor, justamente pelo tamanho do arquivo. Por ter mais de 3GB, ficou inviável armazená-lo no GitHub.
+Tive que utilizar o Google Drive, que embora me permita compartilhar a pasta, está atrelado a uma conta particular.
  
 ### Passos para para configurar este ambiente:
 1. Caso não possua a instalação do VirtualBox, favor instale conforme url:
 https://www.virtualbox.org/wiki/Downloads
-2. Inicialize o Oracle Virtual Machine e baixe o arquivo .OVA no seguinte endereço: ??????
+2. Inicialize o Oracle Virtual Machine e baixe o arquivo .OVA [aqui](https://drive.google.com/file/d/0B4KJCoCOJkpGOEYwYWhPb18ySmM/view?usp=sharing)
 3. No menu Arquivo/Importar Appliance, selecione o arquivo com extensão *.OVA (contido na pasta environments do projeto).
 4. Execute a VM importada (VM Ubuntu 16.04_escience) e abra um terminal de linha de commando.
 5. Entre no diretorio principal: **cd ~/notebooks/enron-paper**
@@ -46,16 +60,8 @@ https://www.virtualbox.org/wiki/Downloads
  
 Assim, basta ter o VirtualBox 5.0 ou superior instalado no Windows, ou até mesmo em uma outra máquina Linux, e importar o arquivo “VM-Ubutu14.04_escience.ova” para então rodar e reproduzir o experimento, bastando apenas seguir a partir do passo 4 da sessão 1.
 
-## 3 - REPRODUÇÃO NO UBUNTU VIA DOCKER:
- 
-### Observações:
-Para não iniciar instalação do ambiente reprodutível do zero, tendo que criar uma imagem e instalar cada ferramenta individualmente, aconselho a instalação do docker cliente e em seguida fazer o pull da imagem dataquestio/python2-starter, pois ela já contempla todo o ambiente integrado do anaconda. 
- 
-Sendo assim, baixei a imagem dataquestio/python2-starter, iniciei o notebook e montei a estrutura do github. O projeto funcionou perfeitamente. Então, fiz o commit com um novo nome e push para minha conta no Docker Hub.
- 
-O teste da reprodutibilidade foi instalar somente o docker em uma máquina ubuntu que não tivesse nenhuma outra ferramenta e-science. Assim, baixei a imagem do Docker Hub e inicializei o notebook. Mas para minha surpresa, ele não continha nenhum dos dados que eu havia acrescentado. Acredito que meu erro foi não ter entendido que ele salva na imagem as instalações e configurações, mas não tais tipos de dados.
- 
-Conclui então que como a diferença da imagem original para a que eu havia alterado era apenas os dados (.ipynb, py files), resolvi não mais criar imagem nova e armazená-la no Docker Hub, mas simplesmente utilizar a imagem já existente juntamente com os dados do meu projeto clonados do GitHub. 
+
+# OBSERVAÇÕES
  
 ### Passos para para configurar este ambiente:
 1. If you don´t have docker client, please install:
@@ -70,7 +76,7 @@ https://store.docker.com/editions/community/docker-ce-server-ubuntu
 7. Agora, jupyter no browser, basta acessar o arquivo contido na pasta deliver e seguir as instruções do paper.
 
 
-## OBSERVAÇÕES SOBRE JUPYTER NOTEBOOK
+### SOBRE JUPYTER NOTEBOOK
  
 No início tive algumas dificuldades para trabalhar com a parte textual do notebook. Depois descobri que é na verdade simples, bastando apenas utilizar a célula como tipo markdown para inserir textos.
  
@@ -79,7 +85,7 @@ cd C:\Users\DELL\Projetos\enron-paper
 C:\Users\DELL\Projetos\enron-paper> jupyter notebook
 
 
-## DOCKER IMAGE CREATION
+### SOBRE DOCKER IMAGE CREATION
 
 1. Instalar docker no ubuntu 16.04
 2. Executar os comandos abaixo no terminal:
@@ -91,12 +97,9 @@ C:\Users\DELL\Projetos\enron-paper> jupyter notebook
  e. sudo docker run -d -p 8888:8888 -v /home/vik/notebooks:/home/ds/notebooks ecalio07/ia369z1:1.0 
  f. sudo docker login --username=ecalio07 --email=ecalio07@gmail.com
  g. sudo docker push ecalio07/ia369z1:1.0
-
-
  
-## CONCLUSÃO 
  
-Acredito que as opções 1 e 2 de reprodutibilidade aqui apresentadas são as mais convenientes para um projeto similar a este. Tanto para quem escreve o projeto, quanto quem somente reproduz. Talvez pela pouca experiência com o docker ou pela complexidade acrescentada, achei a opção 3 menos favorável.
+Acredito que as opções 1 e 2 de reprodutibilidade aqui apresentadas são as mais convenientes para um projeto similar a este. Tanto para quem escreve o projeto, quanto quem somente reproduz. Contudo, talvez pela pouca experiência com o docker ou pela complexidade acrescentada, o docker (opção 2) foi mais trabalhoso.
  
 Recomendo o uso do Anaconda, por disponibilizar o python, Jupyter Notebook, git, Spider e outros, tudo através de uma instalação simples e com ferramentas poderosas.
  
