@@ -31,17 +31,18 @@ Encontrei vários erros de compatibilidade e perdi muito tempo tentando reproduz
 ### Passos para para configurar este ambiente:
 1. Caso não possua a instalação do VirtualBox, favor instale conforme url:
 https://www.virtualbox.org/wiki/Downloads
-2. Inicialize o Oracle Virtual Machine e no meu Arquivo/Importar Appliance, selecione o arquivo com extensão *.OVA (contido na pasta environments do projeto).
-3. Execute a VM importada (VM Ubuntu 16.04_escience) e abra um terminal de linha de commando.
-4. Entre no diretorio principal: **cd ~/notebooks/enron-paper**
-5. Verifique se projeto está atualizado:
-5.1. **sudo git fetch**
-5.2. **sudo git status**
-5.3. (opcional) caso esteja desatualizado : **sudo git pull**
-6. Estando ainda dentro do diretório enron-paper, execute o comando:
-6.1 **jupyter notebook**
-7. Aguarde o browser abrir automaticamente na url : http://localhost:8888. Caso isso não ocorra, insira a url manualmente no browser.
-8. Para reproduzir o projeto, execute as instruções do paper contido dentro da pasta deliver.
+2. Inicialize o Oracle Virtual Machine e baixe o arquivo .OVA no seguinte endereço: ??????
+3. No menu Arquivo/Importar Appliance, selecione o arquivo com extensão *.OVA (contido na pasta environments do projeto).
+4. Execute a VM importada (VM Ubuntu 16.04_escience) e abra um terminal de linha de commando.
+5. Entre no diretorio principal: **cd ~/notebooks/enron-paper**
+6. Verifique se projeto está atualizado:
+6.1. **sudo git fetch**
+6.2. **sudo git status**
+6.3. (opcional) caso esteja desatualizado : **sudo git pull**
+7. Estando ainda dentro do diretório enron-paper, execute o comando:
+7.1 **jupyter notebook**
+8. Aguarde o browser abrir automaticamente na url : http://localhost:8888. Caso isso não ocorra, insira a url manualmente no browser.
+9. Para reproduzir o projeto, execute as instruções do paper contido dentro da pasta deliver.
  
 Assim, basta ter o VirtualBox 5.0 ou superior instalado no Windows, ou até mesmo em uma outra máquina Linux, e importar o arquivo “VM-Ubutu14.04_escience.ova” para então rodar e reproduzir o experimento, bastando apenas seguir a partir do passo 4 da sessão 1.
 
@@ -76,6 +77,20 @@ No início tive algumas dificuldades para trabalhar com a parte textual do noteb
 Perdi certo tempo também insistindo em configurar um diretório padrão para inicializar o notebook via parte gráfica, ao clicar no ícone de inicialização. Apareciam pasta e arquivos indesejados e tentei sem sucesso fixar um diretório de abertura padrão. Depois descobri que é muito mais simples inicializar o notebook por linha de comando partindo da pasta desejada. Assim, se quero que somente as pastas do meu projeto clonado do gitHub apareçam na raiz do notebook no browser, basta entrar na pasta desejada e chamar o notebook. Ex:
 cd C:\Users\DELL\Projetos\enron-paper
 C:\Users\DELL\Projetos\enron-paper> jupyter notebook
+
+
+## DOCKER IMAGE CREATION
+
+1. Instalar docker no ubuntu 16.04
+2. Executar os comandos abaixo no terminal:
+ a. sudo docker pull dataquestio/python2-starter
+ b. docker run -d -p 8888:8888 -v /home/vik/notebooks:/home/ds/notebooks dataquestio/python2-starter
+ c. rode o notebook no browser e inclua seus diretórios e arquivos.
+ c. sudo docker commit <id container que está rodando> ecalio07/ia369z1:1.0 // cria uma nova imagem com o nome+tag =  ecalio07/ia369z1:1.0
+ d. sudo docker stop  <id container>
+ e. sudo docker run -d -p 8888:8888 -v /home/vik/notebooks:/home/ds/notebooks ecalio07/ia369z1:1.0 
+ f. sudo docker login --username=ecalio07 --email=ecalio07@gmail.com
+ g. sudo docker push ecalio07/ia369z1:1.0
 
 
  

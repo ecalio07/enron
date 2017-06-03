@@ -26,8 +26,6 @@ The files sctructure in GitHub is the same one to have in jupyter notebook:
 
 * /deliver: Refer to the most recent **.ipynb** file in this folder as the main stable reproducible paper:<br>
 
-* /environment: Contains DOCKER version, an alternative way to reproduce the experiments without having to set up installation of tools by yourself. 
-
 * /figures: Contains image files imported and displayed by the main files.
 
 ## Overview of the Experiment: Inputs and Outputs
