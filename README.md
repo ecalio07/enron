@@ -16,7 +16,7 @@ This project essencially makes use of the following tools:
 * Python Scripts
 * Scikit-learn libraries
 
-For more instruction, check [installation_guide](environment/README.md)
+For more instruction, check [installation_guide](environment/README.md)<br>
 For suggestions on best practices, check [here](environment/BEST_PRACTICES.md)
 
 ## Structure
