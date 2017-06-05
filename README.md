@@ -11,7 +11,7 @@ The purpose of this project is to provide a **reproducible paper** regarding stu
 
 ## Environment
 Enviroment is essencially based on the following tools:
-* Anaconda 1.6.0, that comes with: Jupyter Notebook 4.3.1, python 2.7, and scikit-learn library.
+* Anaconda2-4.4.0, that comes with: Jupyter Notebook 4.3.1, python 2.7, and scikit-learn library.
 * Docker 17.03.1-ce
 
 For more instructions, check [installation_guide](environment/README.md)<br>
