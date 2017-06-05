@@ -1,9 +1,3 @@
-## Environment Tools
-
-This project is based on the following tools: git version 2.7.4, anaconda 4.3.1 (64-bit), Jupyter Notebook Server 4.3.1, Python 2.7.13, scikit-learn library. 
-
-The experiments can be reproduced in three distinct manners: through anaconda installation, through docker and oracle virtual box. However, all of them make use of Jupyter Notebook as their fundamental tool.
-
 # Environment Installation and Configuration
 
 This project is based on the following tools: git version 2.7.4, anaconda 4.3.1 (64-bit), Jupyter Notebook Server 4.3.1, Python 2.7.13, scikit-learn library. 
