@@ -36,7 +36,7 @@ The files sctructure in GitHub is the same one to have in jupyter notebook:
 
 ## Contact
 
-Feel free to contact me if you need any information on this project(Eduardo Calio): ecalio07@gmail.com
+Feel free to contact me if you need any information on this project: ecalio07@gmail.com
 
 
 
