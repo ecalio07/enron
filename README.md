@@ -1,13 +1,13 @@
 
 # Fraud Detection Machine Learning on Enron Enteprise Dataset
 
-This project contains files used for the subject course "IA369Z - Computational Reproducibility Research" at Unicamp - Professor Leticia Rittner, student Eduardo Calio.
+This project contains files, based on the "Udacity - Introduction to Machine Leaning course", used for the subject course "IA369Z - Computational Reproducibility Research" at Unicamp - Professor Leticia Rittner, student Eduardo Calio.
+
+This is being used for **educational pourposes only**.
 
 ## Introduction
 
 The purpose of this project is to provide a **reproducible paper** regarding studies on how well Naive Bayes, SVM, and Decision Tree Machine Learning Algorithms can indentify emails by their authors using a pre-processed list of email texts and the corresponding authors based on the emails and authors dataset of the famous fraud scandal of the american bankrupt Enron Corporation. We will also study ways to work with parameters to improve accuracy and performance.
-
-**NB:** Contents and instructions used for this paper where based on the **"Udacity - Introduction to Machine Leaning course"**, and related works. This is being used for **educational pourposes only**.
 
 ## Environment
 This project essencially makes use of the following tools:
