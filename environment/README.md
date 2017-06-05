@@ -5,8 +5,10 @@ This project is based on the following tools: git version 2.7.4, anaconda 4.3.1 
 The experiments can be reproduced in three distinct manners: through anaconda installation, through docker and oracle virtual box. However, all of them make use of Jupyter Notebook as their fundamental tool.
 
 # Environment Installation and Configuration
- 
- This project can be reproduced in one of the three options below:
+
+This project is based on the following tools: git version 2.7.4, anaconda 4.3.1 (64-bit), Jupyter Notebook Server 4.3.1, Python 2.7.13, scikit-learn library. 
+
+The experiments can be reproduced in three distinct manners: through anaconda installation, through docker and oracle virtual box. However, all of them make use of Jupyter Notebook as their fundamental tool.
 
 ### Steps to reproduce via Anaconda:
 1. Download and Install Anaconda 4.3.1 for Python 2.7.13. https://www.continuum.io/downloads . Anaconda will include all packages necessary for this experiment: git, python 2.7, scikit-learn and jupyter notebook.
