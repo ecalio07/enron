@@ -20,8 +20,6 @@ For suggestions on best practices, check [here](environment/BEST_PRACTICES.md)
 
 ## Structure
 
-The files sctructure in GitHub is the same one to have in jupyter notebook:
-
 * /data: Holds the dataset files (email_authors.pkl and  word_data), preprocessed by Katie Malone for Udacity machine learning training course.
 
 * /dev: In this directory it is available **.ipynb files** that are imported by the main file in deliver folder
@@ -36,7 +34,7 @@ The files sctructure in GitHub is the same one to have in jupyter notebook:
 
 ## Contact
 
-Feel free to contact me if you need any information on this project: ecalio07@gmail.com
+ecalio07@gmail.com
 
 
 
