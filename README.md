@@ -33,7 +33,7 @@ The files sctructure in GitHub is the same one to have in jupyter notebook:
 
 ## Overview of the Experiment: Inputs and Outputs
 
-<img src="/figures/workflow.png" />
+<img src="figures/workflow.png" />
 
 ## Contact
 
