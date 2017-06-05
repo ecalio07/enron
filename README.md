@@ -10,10 +10,9 @@ This is being used for **educational pourposes only**.
 The purpose of this project is to provide a **reproducible paper** regarding studies on how well Naive Bayes, SVM, and Decision Tree Machine Learning Algorithms can indentify emails by their authors using a pre-processed list of email texts and the corresponding authors based on the emails and authors dataset of the famous fraud scandal of the american bankrupt Enron Corporation. We will also study ways to work with parameters to improve accuracy and performance.
 
 ## Environment
-This project essencially makes use of the following tools:
-* Docker and Jupyter Notebook
-* Python Scripts
-* Scikit-learn libraries
+Enviroment is essencially based on the following tools:
+* Anaconda that comes with: Jupyter Notebook, python 2.7, and scikit-learn libraries
+* Docker
 
 For more instructions, check [installation_guide](environment/README.md)<br>
 For suggestions on best practices, check [here](environment/BEST_PRACTICES.md)
