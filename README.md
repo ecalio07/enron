@@ -16,6 +16,8 @@ This project essencially makes use of the following tools:
 * Python Scripts
 * Scikit-learn libraries
 
+For more instruction, check [guide](environment/README.md)
+
 ## Structure
 
 The files sctructure in GitHub is the same one to have in jupyter notebook:
@@ -31,6 +33,10 @@ The files sctructure in GitHub is the same one to have in jupyter notebook:
 ## Overview of the Experiment: Inputs and Outputs
 
 <img src="/figures/workflow.png" />
+
+## Contact
+
+Feel free to contact me if you need any information on this project(Eduardo Calio): ecalio07@gmail.com
 
 
 
