@@ -1,7 +1,7 @@
 
 # Fraud Detection Machine Learning on Enron Enteprise Dataset
 
-This project contains files used for the subject course "Computational Reproducibility in Research" at Unicamp.
+This project contains files used for the subject course "IA369Z - Computational Reproducibility Research" at Unicamp - Professor Leticia Rittner.
 
 ## Introduction
 
