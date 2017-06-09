@@ -4,6 +4,34 @@ This project is based on the following tools: git version 2.7.4, Anaconda2-4.4.0
 
 The experiments can be reproduced in three distinct manners: through anaconda installation, through docker and oracle virtual box. However, all of them make use of Jupyter Notebook as their fundamental tool.
 
+
+### Steps to reproduce via Docker on Ubuntu:
+1. If you don´t have docker client, please install:
+https://store.docker.com/editions/community/docker-ce-server-ubuntu
+2. Donwload the image: **sudo docker pull dataquestio/python2-starter**
+3. Run image to create the container: **docker run -d -p 8888:8888 -v /home/vik/notebooks:/home/ds/notebooks dataquestio/python2-starter**
+4. Go into the following directory: **cd /home/vik/notebooks**
+5. Clone the project from GitHub: **git clone https://github.com/ecalio07/enron-paper.git**
+6. Copy files from /home/vik/notebooks/enron-paper (arquivos locais) to directory inside tocker /home/ds/notebooks. Isto pode ser feito de duas maneira:
+6.1. Via  cp
+6.2. Or through Jupyter localhost:8888 via browser, create folders (dev, deliver, figures, data) e and upload local files to (/home/vik/notebooks/enron-paper).
+7. In jupyter(browser), access file inside folder deliver and following instructions.
+
+### Steps to reproduce via Docker on Windows:
+1. If you don´t have docker client, please install:
+https://store.docker.com/editions/community/docker-ce-server-ubuntu
+2. Start Docker Terminal
+2. Donwload the image: **docker pull dataquestio/python2-starter**
+3. Run image to create the container: **docker run -p 8888:8888 -v $HOME/notebooks:/home/notebooks dataquestio/python2-starter**
+4. Go into the following directory: **cd /home/vik/notebooks**
+5. Clone the project from GitHub: **git clone https://github.com/ecalio07/enron-paper.git**
+6. Copy files from /home/vik/notebooks/enron-paper (arquivos locais) to directory inside tocker /home/ds/notebooks. Isto pode ser feito de duas maneira:
+6.1. Via  cp
+6.2. Or through Jupyter localhost:8888 via browser, create folders (dev, deliver, figures, data) e and upload local files to (/home/vik/notebooks/enron-paper).
+7. In jupyter(browser), access file inside folder deliver and following instructions.
+
+
+
 ### Steps to reproduce via Anaconda:
 1. Download and Install Anaconda2-4.4.0 for Python 2.7.13. https://www.continuum.io/downloads . Anaconda will include all packages necessary for this experiment: git, python 2.7, scikit-learn and jupyter notebook.
 2. After installation close the terminal and start a new one.
