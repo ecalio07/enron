@@ -14,8 +14,8 @@ Enviroment is essencially based on the following tools:
 * Anaconda2-4.4.0, that comes with: Jupyter Notebook 4.3.1, python 2.7, and scikit-learn library.
 * Docker 17.03.1-ce
 
-For more instructions, check [installation_guide](environment/README.md)<br>
-For suggestions on best practices, check [here](environment/BEST_PRACTICES.md)
+For more instructions on installations, click [here](environment/README.md)<br>
+For suggestions on best practices, click [here](environment/BEST_PRACTICES.md)
 
 ## Structure
 
