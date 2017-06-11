@@ -4,7 +4,7 @@ This project is based on the following tools: git version 2.7.4, Anaconda 4.3.1 
 
 The experiments can be reproduced in three distinct manners: through anaconda installation on local so, through docker and oracle virtual box. However, all of them make use of Jupyter Notebook as their fundamental tool.
 
-**It is advisable to use Docker as the most reliable tool, since image environment will be identical to when it was created. If you rather do it without docker, using only  your local SO and anaconda, be aware that other installations you have, such as other python versions, might affect reproducibility. Or if you prefer virtual box, be aware the file is around 4GB and download might  be affected due to internet limitations**
+**It is advisable to use Docker as the most reliable of the three options, since image environment will be identical to when it was created. If you rather do it without docker, using only  your local SO and anaconda, be aware that other installations you have, such as other python versions, might affect reproducibility. Or if you prefer virtual box, be aware the file is around 4GB and download might  be affected due to internet limitations**
 
 ### Steps to reproduce via Docker on Windows:
 * 1. For most windows versions, install Docker Tool Box: https://www.docker.com/products/docker-toolbox. For Windows 10 Professional or or Enterprise 64-bit: https://store.docker.com/editions/community/docker-ce-desktop-windows
