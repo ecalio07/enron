@@ -1,62 +1,44 @@
 # Environment Installation and Configuration
 
-This project is based on the following tools: git version 2.7.4, Anaconda2-4.4.0 (64-bit), Jupyter Notebook Server 4.3.1, Python 2.7.13, scikit-learn library. 
+This project is based on the following tools: git version 2.7.4, Anaconda 4.3.1 (64-bit), Jupyter Notebook Server 4.3.1, Python 2.7.13, scikit-learn library version 0.18.1. 
 
-The experiments can be reproduced in three distinct manners: through anaconda installation, through docker and oracle virtual box. However, all of them make use of Jupyter Notebook as their fundamental tool.
+The experiments can be reproduced in three distinct manners: through anaconda installation on local so, through docker and oracle virtual box. However, all of them make use of Jupyter Notebook as their fundamental tool.
 
+**It is advisable to use Docker as the most reliable tool, since image environment will be identical to when it was created. If you rather do it without docker, using only  your local SO and anaconda, be aware that other installations you have, such as other python versions, might affect reproducibility. Or if you prefer virtual box, be aware the file is around 4GB and download might  be affected due to internet limitations**
+
+### Steps to reproduce via Docker on Windows:
+* 1. For most windows versions, install Docker Tool Box: https://www.docker.com/products/docker-toolbox. For Windows 10 Professional or or Enterprise 64-bit: https://store.docker.com/editions/community/docker-ce-desktop-windows
+* 2. Clone for first time or update local git repository. **Note: For docker to see this directory, it must be inside C:\Users\<user> directory:** git clone https://github.com/ecalio07/enron-paper.git
+* 3. Open Docker Terminal, make note docker terminal id. Usually it is (192.168.99.100)
+* 4. Enter command: docker pull ecalio07/ia369z:4.0
+* 5. Run the image: docker run -p 8888:8888 -v \<cloned enron-paper directory>\:/home/ds/notebooks ecalio07/ia369z:4.0. This command will copy all content from you local project directory to the docker container (/home/ds/notebooks). Example with windows path: 
+* docker run -p 8888:8888 -v /c/Users/DELL/enron-paper:/home/ds/notebooks ecalio07/ia369z:4.0 
+* 6. Open browser, and use the terminal id from step 2, to compose the url: http://192.168.99.100:8888 and paste it to the browser
+* 7. Navigate to /deliver folder and run the most recent paper cells.
 
 ### Steps to reproduce via Docker on Ubuntu:
 1. If you don´t have docker client, please install:
 https://store.docker.com/editions/community/docker-ce-server-ubuntu
-2. Donwload the image: **sudo docker pull dataquestio/python2-starter**
-3. Run image to create the container: **docker run -d -p 8888:8888 -v /home/vik/notebooks:/home/ds/notebooks dataquestio/python2-starter**
-4. Go into the following directory: **cd /home/vik/notebooks**
-5. Clone the project from GitHub: **git clone https://github.com/ecalio07/enron-paper.git**
-6. Copy files from /home/vik/notebooks/enron-paper (arquivos locais) to directory inside tocker /home/ds/notebooks. Isto pode ser feito de duas maneira:
-6.1. Via  cp
-6.2. Or through Jupyter localhost:8888 via browser, create folders (dev, deliver, figures, data) e and upload local files to (/home/vik/notebooks/enron-paper).
-7. In jupyter(browser), access file inside folder deliver and following instructions.
+2. Clone for first time or update local git repository: git clone https://github.com/ecalio07/enron-paper.git
+3. Download docker image. Enter command in terminal: docker pull ecalio07/ia369z:4.0
+4. Run image to create the container. Enter command: **sudo docker run -d -p 8888:8888 -v \<cloned enron-paper directory>\:/home/ds/notebooks ecalio07/ia369z:4.0**
+4. Go to the browser and paste the following url: http://localhost:8888.
+5. In jupyter(browser), access file inside folder deliver and following instructions.
 
-### Steps to reproduce via Docker on Windows:
-1. If you don´t have docker client, please install:
-https://store.docker.com/editions/community/docker-ce-server-ubuntu
-2. Start Docker Terminal
-2. Donwload the image: **docker pull dataquestio/python2-starter**
-3. Run image to create the container: **docker run -p 8888:8888 -v $HOME/notebooks:/home/notebooks dataquestio/python2-starter**
-4. Go into the following directory: **cd /home/vik/notebooks**
-5. Clone the project from GitHub: **git clone https://github.com/ecalio07/enron-paper.git**
-6. Copy files from /home/vik/notebooks/enron-paper (arquivos locais) to directory inside tocker /home/ds/notebooks. Isto pode ser feito de duas maneira:
-6.1. Via  cp
-6.2. Or through Jupyter localhost:8888 via browser, create folders (dev, deliver, figures, data) e and upload local files to (/home/vik/notebooks/enron-paper).
-7. In jupyter(browser), access file inside folder deliver and following instructions.
-
-
-
-### Steps to reproduce via Anaconda:
-1. Download and Install Anaconda2-4.4.0 for Python 2.7.13. https://www.continuum.io/downloads . Anaconda will include all packages necessary for this experiment: git, python 2.7, scikit-learn and jupyter notebook.
+### Steps to reproduce via Anaconda on Windows (using terminal):
+1. Download and Install Anaconda 4.3.1 for Python 2.7.13. https://www.continuum.io/downloads . Anaconda will include all packages necessary for this experiment: git, python 2.7, scikit-learn and jupyter notebook.
 2. After installation close the terminal and start a new one.
-3. Create a new folder: **mkdir /home/youruser/notebooks**
-4. Enter this new folder: **cd /home/youruser/notebooks** and issue the command: 
-**git clone https://github.com/ecalio07/enron-paper.git**
-5. Enter into the newly created directory: **cd /home/youruser/notebooks/enron-paper**.
-6. Still in the direcotry from step 5, execute: **jupyter notebook**
-7. Reproduce the experiments following .ipynb file within deliver directory
+3. Enter into preferred directoy and issue the command to clone project:**git clone https://github.com/ecalio07/enron-paper.git**
+4. Enter into the newly cloned directory root(c:\xxx\xxx\enron-paper) and issue the command: **jupyter notebook**
+5. In the browser enter url http://localhost:8888 and reproduce the experiments using the most recent file .ipynb within /deliver directory
 
-Obs: Para windows são os mesmos passos, mudando somente a estrutura de diretórios.
-
-
-### Steps to reproduce via Docker (Ubuntu):
-1. If you don´t have docker client, please install:
-https://store.docker.com/editions/community/docker-ce-server-ubuntu
-2. Donwload the image: **sudo docker pull dataquestio/python2-starter**
-3. Run image to create the container: **docker run -d -p 8888:8888 -v /home/vik/notebooks:/home/ds/notebooks dataquestio/python2-starter**
-4. Go into the following directory: **cd /home/vik/notebooks**
-5. Clone the project from GitHub: **git clone https://github.com/ecalio07/enron-paper.git**
-6. Copy files from /home/vik/notebooks/enron-paper (arquivos locais) to directory inside tocker /home/ds/notebooks. Isto pode ser feito de duas maneira:
-6.1. Via  cp
-6.2. Or through Jupyter localhost:8888 via browser, create folders (dev, deliver, figures, data) e and upload local files to (/home/vik/notebooks/enron-paper).
-7. In jupyter(browser), access file inside folder deliver and following instructions.
-
+### Steps to reproduce via Anaconda on Ubuntu (using terminal):
+1. Download and Install Anaconda 4.3.1 for Python 2.7.13. https://www.continuum.io/downloads . Anaconda will include all packages necessary for this experiment: git, python 2.7, scikit-learn and jupyter notebook.
+2. After installation close the terminal and start a new one.
+3. Enter into preferred directoy and issue the command to clone project:**git clone https://github.com/ecalio07/enron-paper.git** 
+4. Enter into the newly cloned directory root(/home/youruser/notebooks/enron-paper) and issue the command: **jupyter notebook** 
+5. Still in the direcotry from step 5, execute: **jupyter notebook**
+6. In the browser enter url http://localhost:8888 and reproduce the experiments using the most recent file .ipynb within /deliver directory
  
 ### Steps to reproduce via VirtualBox:
 1. If you don't have VirtualBox installed, please consult url:
