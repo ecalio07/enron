@@ -8,7 +8,7 @@ The experiments can be reproduced in three distinct manners: through anaconda in
 
 ### Steps to reproduce via Docker on Windows:
 1. For most windows versions, install Docker Tool Box: https://www.docker.com/products/docker-toolbox. For Windows 10 Professional or or Enterprise 64-bit: https://store.docker.com/editions/community/docker-ce-desktop-windows
-2. Clone for first time or update local git repository. **Note: For docker to see this directory, it must be inside C:\Users\{user} directory:**git clone https://github.com/ecalio07/enron-paper.git
+2. Clone for first time or update local git repository. **Note: For docker to see this directory, it must be inside C:\Users\\{user} directory:**git clone https://github.com/ecalio07/enron-paper.git
 3. Open Docker Terminal, make note docker terminal id. Usually it is (192.168.99.100)
 4. Enter command: **docker pull ecalio07/ia369z:4.0**
 5. Run the image: **docker run -p 8888:8888 -v \<cloned enron-paper directory>\:/home/ds/notebooks ecalio07/ia369z:4.0**. This command will copy all content from you local project directory to the docker container (/home/ds/notebooks). 
