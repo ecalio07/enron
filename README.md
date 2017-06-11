@@ -27,7 +27,7 @@ For suggestions on best practices, click [here](environment/BEST_PRACTICES.md)
 
 * /figures: Contains image files imported and displayed by the main files.
 
-## Overview of the Experiment: Inputs and Outputs
+## Workflow Experiments Overview: Inputs and Outputs
 
 <img src="figures/workflow.png" />
 
