@@ -12,7 +12,8 @@ The purpose of this project is to provide a **reproducible paper** regarding stu
 ## Environment
 Enviroment is essencially based on the following tools:
 * Anaconda 4.3.1(Jupyter Notebook Server 4.3.1, Python 2.7.13, scikit-learn library version 0.18.1) and git version 2.7.4.
-* Docker 17.03.1-ce
+* Docker Client 17.03.1-ce
+* Docker Image: ecalio07/ia369z:4.0 was adapted, due to incompatibility issues with the code, from original image dataquestio/python2-starter, in order to have all tools but more recent versions of the following libraries: scikit-learn from 0.17 to 0.18, nltk from 3.1 to 3.2.
 
 For installation instructions and detailed reproduction steps, click [here](environment/README.md)<br>
 For suggestions on best reproducibility practices, click [here](environment/BEST_PRACTICES.md)
