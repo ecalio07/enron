@@ -1,8 +1,6 @@
 # Environment Installation and Configuration
 
-This project is based on the following tools: git version 2.7.4, Anaconda 4.3.1 (64-bit), Jupyter Notebook Server 4.3.1, Python 2.7.13, scikit-learn library version 0.18.1. 
-
-The experiments can be reproduced in three distinct manners: through anaconda installation on local so, through docker and oracle virtual box. However, all of them make use of Jupyter Notebook as their fundamental tool.
+The experiments can be reproduced in three distinct manners: through anaconda installation on local so, through docker, and oracle virtual box. All of the options make use of Jupyter Notebook as their fundamental tool.
 
 **It is advisable to use Docker as the most reliable of the three options, since image environment will be identical to when it was created. If you rather do it without docker, using only  your local SO and anaconda, be aware that other installations you have, such as other python versions, might affect reproducibility. Or if you prefer virtual box, be aware the file is around 4GB and download might  be affected due to internet limitations**
 
