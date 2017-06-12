@@ -45,12 +45,8 @@ https://www.virtualbox.org/wiki/Downloads
 3. Go to menu File/Import Appliance, and select donwloaded *.OVA.
 4. start  (VM Ubuntu 16.04_escience) and open a terminal.
 5. Go into the directory enron-paper: **cd ~/notebooks/enron-paper**
-6. Verify if the project is updated:<br>
-6.1. **sudo git fetch** <br>
-6.2. **sudo git status**<br>
-6.3. (options) if not updated : **sudo git pull**<br>
-7. Inside enron-paper root directory, execute the following command:
-7.1 **jupyter notebook**
+6. Verify if git project is udated using (git fetch/git status). If necessary, update from repository.
+7. Inside enron-paper root directory, execute the following command: **jupyter notebook**
 8. Await for the browser to open in the following url : http://localhost:8888. Insert manually if necessary.
 9. To reproduce the project, follow instruction in the most recent paper into /deliver folder.
  
