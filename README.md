@@ -15,7 +15,7 @@ Enviroment is essencially based on the following tools:
 * Docker 17.03.1-ce
 
 For installation instructions and detailed reproduction steps, click [here](environment/README.md)<br>
-For suggestions on best practices, click [here](environment/BEST_PRACTICES.md)
+For suggestions on best reproducibility practices, click [here](environment/BEST_PRACTICES.md)
 
 ## Structure
 
