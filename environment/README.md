@@ -35,9 +35,8 @@ https://store.docker.com/editions/community/docker-ce-server-ubuntu
 2. After installation close the terminal and start a new one.
 3. Enter into preferred directoy and issue the command to clone project:**git clone https://github.com/ecalio07/enron-paper.git** 
 4. Enter into the newly cloned directory root(/home/youruser/notebooks/enron-paper) and issue the command: **jupyter notebook** 
-5. Still in the direcotry from step 5, execute: **jupyter notebook**
-6. In the browser enter url http://localhost:8888 and reproduce the experiments using the most recent file .ipynb within /deliver directory
- 
+5. In the browser enter url http://localhost:8888 and reproduce the experiments using the most recent file .ipynb within /deliver directory
+
 ### Steps to reproduce via VirtualBox:
 1. If you don't have VirtualBox installed, please consult url:
 https://www.virtualbox.org/wiki/Downloads
