@@ -43,10 +43,10 @@ https://store.docker.com/editions/community/docker-ce-server-ubuntu
 https://www.virtualbox.org/wiki/Downloads
 2. Start Oracle Virtual Machine and donwload the file .OVA [here](https://drive.google.com/file/d/0B4KJCoCOJkpGOEYwYWhPb18ySmM/view?usp=sharing)
 3. Go to menu File/Import Appliance, and select donwloaded *.OVA.
-4. start  (VM Ubuntu 16.04_escience) and open a terminal.
+4. Start  (VM Ubuntu 16.04_escience) and open a terminal.
 5. Go into the directory enron-paper: **cd ~/notebooks/enron-paper**
 6. Verify if git project is udated using (git fetch/git status). If necessary, update from repository.
 7. Inside enron-paper root directory, execute the following command: **jupyter notebook**
 8. Await for the browser to open in the following url : http://localhost:8888. Insert manually if necessary.
-9. To reproduce the project, follow instruction in the most recent paper into /deliver folder.
+9. To reproduce the project, follow instructions in the most recent paper into /deliver folder.
  
