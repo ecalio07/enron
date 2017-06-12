@@ -23,14 +23,14 @@ https://store.docker.com/editions/community/docker-ce-server-ubuntu
 5. Go to the browser and paste the following url: **http://localhost:8888**
 6. In jupyter(browser), access file inside folder deliver and following instructions.
 
-### Steps to reproduce via Anaconda on Windows (using terminal):
+### Steps to reproduce via Anaconda on Windows:
 1. Download and Install Anaconda 4.3.1 for Python 2.7.13. https://www.continuum.io/downloads . Anaconda will include all packages necessary for this experiment: git, python 2.7, scikit-learn and jupyter notebook.
 2. After installation close the terminal and start a new one.
 3. Enter into preferred directoy and issue the command to clone project:**git clone https://github.com/ecalio07/enron-paper.git**
 4. Enter into the newly cloned directory root(c:\xxx\xxx\enron-paper) and issue the command: **jupyter notebook**
 5. In the browser enter url http://localhost:8888 and reproduce the experiments using the most recent file .ipynb within /deliver directory
 
-### Steps to reproduce via Anaconda on Ubuntu (using terminal):
+### Steps to reproduce via Anaconda on Ubuntu:
 1. Download and Install Anaconda 4.3.1 for Python 2.7.13. https://www.continuum.io/downloads . Anaconda will include all packages necessary for this experiment: git, python 2.7, scikit-learn and jupyter notebook.
 2. After installation close the terminal and start a new one.
 3. Enter into preferred directoy and issue the command to clone project:**git clone https://github.com/ecalio07/enron-paper.git** 
