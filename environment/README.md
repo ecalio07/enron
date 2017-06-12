@@ -11,7 +11,7 @@ The experiments can be reproduced in three distinct manners: through anaconda in
 2. Clone for first time or update local git repository. **Note: For docker to see this directory, it must be inside C:\Users\\{user} directory:**git clone https://github.com/ecalio07/enron-paper.git
 3. Open Docker Terminal, make note docker terminal id. Usually it is (192.168.99.100)
 4. Run the image: **docker run -p 8888:8888 -v \<cloned enron-paper directory>\:/home/ds/notebooks ecalio07/ia369z:4.0**<br>
-This command will download image ecalio07/ia369z:4.0, if it is not local, copy all content from you local project directory to the docker container (/home/ds/notebooks) and run image in the container. 
+This command will download image ecalio07/ia369z:4.0, if it is not local, copy all content from you local project directory to the docker container (/home/ds/notebooks) and run image in the container.<br> 
 Example with windows path: **docker run -p 8888:8888 -v /c/Users/DELL/enron-paper:/home/ds/notebooks ecalio07/ia369z:4.0** 
 5. Open browser, and use the terminal id from step 2, to compose the url: **http://192.168.99.100:8888** and paste it.
 6. Navigate to /deliver folder and run the most recent paper cells.
