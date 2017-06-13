@@ -1,0 +1,14 @@
+((*- extends 'article.tplx' -*))
+
+((* block author *))
+\author{Eduardo Calio}
+((* endblock author *))
+
+((* block title *))
+\title{Fraud Detection Machine Learning on Enron Enteprise Dataset}
+((* endblock title *))
+
+((* block bibliography *))
+\bibliographystyle{plain}
+\bibliography{ref}
+((* endblock bibliography *))
