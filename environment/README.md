@@ -4,7 +4,7 @@ The experiments can be reproduced in three distinct manners: through anaconda in
 
 **It is advisable to use Docker as the most reliable of the three options, since image environment will be identical to when it was created. If you rather do it without docker, using only  your local SO and anaconda, be aware that other installations you have, such as other python versions, might affect reproducibility. Or if you prefer virtual box, be aware the file is around 4GB and download might  be affected due to internet limitations**
 
-======================================= ** DOCKER ** ======================================== 
+=======================================< **DOCKER** >======================================== 
 
 ### Steps to reproduce via DOCKER on WINDOWS
 1. For most windows versions, install Docker Tool Box: https://www.docker.com/products/docker-toolbox. For Windows 10 Professional and Enterprise 64-bit: https://store.docker.com/editions/community/docker-ce-desktop-windows
