@@ -3,11 +3,11 @@
 The experiments can be reproduced in three distinct manners: through anaconda installation on local so, through docker, and oracle virtual box. All of the options make use of Jupyter Notebook as their fundamental tool.
 
 **It is advisable to use Docker as the most reliable of the three options, since image environment will be identical to when it was created. If you rather do it without docker, using only  your local SO and anaconda, be aware that other installations you have, such as other python versions, might affect reproducibility. Or if you prefer virtual box, be aware the file is around 4GB and download might  be affected due to internet limitations**.<br><br>
-=======================================< **DOCKER** >======================================== 
+=================================< **DOCKER** >================================= 
 
 ### Steps to reproduce via DOCKER on WINDOWS
 1. For most windows versions, install Docker Tool Box: https://www.docker.com/products/docker-toolbox. For Windows 10 Professional and Enterprise 64-bit: https://store.docker.com/editions/community/docker-ce-desktop-windows
-2. Clone for first time or update local git repository. For docker to mount directory when running image, cloned directory must be inside C:\Users\\{user} directory.<br> Issue command: **git clone https://github.com/ecalio07/enron-paper.git**
+2. **Clone for first time or update local git repository**. For docker to mount directory when running image, cloned directory must be inside C:\Users\\{user} directory.<br> Issue command: **git clone https://github.com/ecalio07/enron-paper.git**
 3. Open Docker Terminal, make note docker terminal id. Usually it is (192.168.99.100)
 4. Run the image: **docker run -p 8888:8888 -v \<cloned enron-paper directory>\:/home/ds/notebooks ecalio07/ia369z:4.0**<br>
 This command will download image ecalio07/ia369z:4.0, if it is not local, copy all content from you local project directory to the docker container (/home/ds/notebooks) and run image in the container.<br> 
@@ -18,7 +18,7 @@ This command will download image ecalio07/ia369z:4.0, if it is not local, copy a
 ### Steps to reproduce via DOCKER on MAC
 1. If you don´t have docker client, please install:
 https://store.docker.com/editions/community/docker-ce-server-ubuntu
-2. Clone for first time or update local git repository, preferably under /Users/{user}/ directory.<br> Issue command: **git clone https://github.com/ecalio07/enron-paper.git**
+2. **Clone for first time or update local git repository**, preferably under /Users/{user}/ directory.<br> Issue command: **git clone https://github.com/ecalio07/enron-paper.git**
 3. Run the image: **docker run -p 8888:8888 -v \<cloned enron-paper directory>\:/home/ds/notebooks ecalio07/ia369z:4.0**<br>
 This command will download image ecalio07/ia369z:4.0, if it is not local, copy all content from you local project directory to the docker container (/home/ds/notebooks) and run image in the container.<br> 
 **Example in MAC path: docker run -p 8888:8888 -v /Users/marie/enron-paper:/home/ds/notebooks ecalio07/ia369z:4.0**
@@ -28,14 +28,14 @@ This command will download image ecalio07/ia369z:4.0, if it is not local, copy a
 ### Steps to reproduce via DOCKER on UBUNTU:
 1. If you don´t have docker client, please install:
 https://store.docker.com/editions/community/docker-ce-server-ubuntu
-2. Clone for first time or update local git repository: git clone https://github.com/ecalio07/enron-paper.git
+2. **Clone for first time or update local git repository**: **git clone https://github.com/ecalio07/enron-paper.git**
 3. Download docker image. Enter command in terminal: **sudo docker pull ecalio07/ia369z:4.0**
 4. Run image to create the container. Enter command: **sudo docker run -d -p 8888:8888 -v \<cloned enron-paper directory>\:/home/ds/notebooks ecalio07/ia369z:4.0**
 5. Go to the browser and paste the following url: **http://localhost:8888**
 6. In jupyter(browser), access file inside folder deliver and following instructions.
 
 
-===================================< **LOCAL SO WITH ANACONDA** >============================ 
+==============================< **LOCAL SO WITH ANACONDA** >======================= 
 
 ### Steps to reproduce via Anaconda on Windows:
 1. Download and Install Anaconda 4.3.1 for Python 2.7.13. https://www.continuum.io/downloads . Anaconda will include all packages necessary for this experiment: git, python 2.7, scikit-learn and jupyter notebook.
@@ -51,7 +51,7 @@ https://store.docker.com/editions/community/docker-ce-server-ubuntu
 4. Enter into the newly cloned directory root(/home/youruser/notebooks/enron-paper) and issue the command: **jupyter notebook** 
 5. In the browser enter url http://localhost:8888 and reproduce the experiments using the most recent file .ipynb within /deliver directory
 
-=======================================< **VIRTUALBOX** >===================================
+=================================< **VIRTUALBOX** >=============================
 
 ### Steps to reproduce via VirtualBox:
 1. If you don't have VirtualBox installed, please consult url:
