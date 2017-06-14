@@ -4,7 +4,7 @@ The experiments can be reproduced in three distinct manners: through anaconda in
 
 **It is advisable to use Docker as the most reliable of the three options, since image environment will be identical to when it was created. If you rather do it without docker, using only  your local SO and anaconda, be aware that other installations you have, such as other python versions, might affect reproducibility. Or if you prefer virtual box, be aware the file is around 4GB and download might  be affected due to internet limitations**
 
-===================================================  ** DOCKER ** =================================================== 
+======================================= ** DOCKER ** ======================================== 
 
 ### Steps to reproduce via DOCKER on WINDOWS
 1. For most windows versions, install Docker Tool Box: https://www.docker.com/products/docker-toolbox. For Windows 10 Professional and Enterprise 64-bit: https://store.docker.com/editions/community/docker-ce-desktop-windows
@@ -36,7 +36,7 @@ https://store.docker.com/editions/community/docker-ce-server-ubuntu
 6. In jupyter(browser), access file inside folder deliver and following instructions.
 
 
-=============================================== ** LOCAL HOST WITH ANACONDA ** ======================================== 
+=================================== ** LOCAL SO WITH ANACONDA ** ============================ 
 
 ### Steps to reproduce via Anaconda on Windows:
 1. Download and Install Anaconda 4.3.1 for Python 2.7.13. https://www.continuum.io/downloads . Anaconda will include all packages necessary for this experiment: git, python 2.7, scikit-learn and jupyter notebook.
@@ -52,7 +52,7 @@ https://store.docker.com/editions/community/docker-ce-server-ubuntu
 4. Enter into the newly cloned directory root(/home/youruser/notebooks/enron-paper) and issue the command: **jupyter notebook** 
 5. In the browser enter url http://localhost:8888 and reproduce the experiments using the most recent file .ipynb within /deliver directory
 
-=============================================== ** VIRTUALBOX ** ======================================================
+=========================================== ** VIRTUALBOX ** ===================================
 
 ### Steps to reproduce via VirtualBox:
 1. If you don't have VirtualBox installed, please consult url:
