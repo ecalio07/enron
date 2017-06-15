@@ -6,10 +6,10 @@ The experiments can be reproduced in three distinct manners: through anaconda in
 **It is advisable to use Docker as the most reliable of the three options, since image environment will be identical to when it was created. If you rather do it without docker, using only  your local SO and anaconda, be aware that other installations you have, such as other python versions, might affect reproducibility. Or if you prefer virtual box, be aware the file is around 4GB and download might  be affected due to internet limitations**.<br><br>
 =================================< **DOCKER** >================================= 
 
-### Steps to reproduce via DOCKER on WINDOWS
+### Steps to reproduce via DOCKER on WINDOWS(version 8 and 10)
 1. For most windows versions, install Docker Tool Box: https://www.docker.com/products/docker-toolbox. For Windows 10 Professional and Enterprise 64-bit: https://store.docker.com/editions/community/docker-ce-desktop-windows
 2. **Clone for first time or update local git repository**. For docker to mount directory when running image, cloned directory must be inside C:\Users\\{user} directory.<br> Issue command: **git clone https://github.com/ecalio07/enron-paper.git**
-3. Open **Docker Terminal(NOT the Winndows Terminal)**, make note docker terminal id. Usually it is (192.168.99.100). 
+3. Open **Docker Terminal(NOT the Windows Terminal)**, make note docker terminal id. Usually it is (192.168.99.100). 
 4. Run image to create the container. Enter command in terminal:: **docker run -p 8888:8888 -v \<cloned enron-paper directory>\:/home/ds/notebooks ecalio07/ia369z:4.0**<br>
 This command will download(pull) image ecalio07/ia369z:4.0 automaticamente if not available locally. After that, it will copy all content from you local cloned project directory into the docker container (/home/ds/notebooks) and run image in the container.<br> 
 * Example with **Windows path**: **docker run -p 8888:8888 -v /c/Users/DELL/enron-paper:/home/ds/notebooks ecalio07/ia369z:4.0** 
