@@ -26,7 +26,7 @@ This command will automatically download (pull) image ecalio07/ia369z:4.0 from D
 5. Open browser, and use the terminal id from step 3, to compose the url: **http://192.168.99.100:8888** and paste it. 
 6. Navigate to /deliver folder and run the most recent paper cells.
 
-### Steps to reproduce via DOCKER on UBUNTU (tested on version 16.04 lts):
+### Steps to reproduce via DOCKER on UBUNTU (tested on version 16.04 LTS):
 1. If you don´t have docker client, please install:
 https://store.docker.com/editions/community/docker-ce-server-ubuntu
 2. **Clone for first time or update local git repository**: **git clone https://github.com/ecalio07/enron-paper.git**
