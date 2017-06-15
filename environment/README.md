@@ -16,7 +16,7 @@ This command will automatically download (pull) image ecalio07/ia369z:4.0 from D
 4. Go to the browser and paste the following url: **http://localhost:8888**
 5. In jupyter(browser), access file inside folder deliver and following instructions.
 
-### Steps to reproduce via DOCKER on WINDOWS(tested on versions 8 and 10)
+### Steps to reproduce via DOCKER on WINDOWS (tested on versions 8 and 10)
 1. For most windows versions, install Docker Tool Box: https://www.docker.com/products/docker-toolbox. For Windows 10 Professional and Enterprise 64-bit: https://store.docker.com/editions/community/docker-ce-desktop-windows
 2. **Clone for first time or update local git repository**. For docker to mount directory when running image, cloned directory must be inside C:\Users\\{user} directory.<br> Issue command: **git clone https://github.com/ecalio07/enron-paper.git**
 3. Open **Docker Terminal(NOT the Windows Terminal)**, make note docker terminal id. Usually it is (192.168.99.100). 
@@ -26,7 +26,7 @@ This command will automatically download (pull) image ecalio07/ia369z:4.0 from D
 5. Open browser, and use the terminal id from step 3, to compose the url: **http://192.168.99.100:8888** and paste it. 
 6. Navigate to /deliver folder and run the most recent paper cells.
 
-### Steps to reproduce via DOCKER on UBUNTU(tested on version 16.04 lts):
+### Steps to reproduce via DOCKER on UBUNTU (tested on version 16.04 lts):
 1. If you don´t have docker client, please install:
 https://store.docker.com/editions/community/docker-ce-server-ubuntu
 2. **Clone for first time or update local git repository**: **git clone https://github.com/ecalio07/enron-paper.git**
