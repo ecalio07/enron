@@ -1,7 +1,7 @@
 
 # Image creation based on another:dataquestio/python2-starter
 
-### Steps:
+### Steps on Windows (docker terminal):
 
 1. Go to Docker Hub and create an account and a new repository: https://hub.docker.com/
 2. Make note of username and repository name. They will be used to create new image name: username/repositoryname. 
