@@ -1,5 +1,5 @@
 
-# Image creation based on another (dataquestio/python2-starter)
+# Image creation based on another:dataquestio/python2-starter
 
 ### Steps:
 
