@@ -1,4 +1,5 @@
 # Environment Installation and Configuration
+Anaconda 4.3.1(Jupyter Notebook Server 4.3.1, Python 2.7.13, scikit-learn library version 0.18.1, nltk 3.2), git version 2.7.4, Docker Client 17.03.1-ce, docker image ecalio07/ia369z:4.0 adapted from dataquestio/python2-starter.
 
 The experiments can be reproduced in three distinct manners: through anaconda installation on local so, through docker, and oracle virtual box. All of the options make use of Jupyter Notebook as their fundamental tool.
 
@@ -9,18 +10,18 @@ The experiments can be reproduced in three distinct manners: through anaconda in
 1. For most windows versions, install Docker Tool Box: https://www.docker.com/products/docker-toolbox. For Windows 10 Professional and Enterprise 64-bit: https://store.docker.com/editions/community/docker-ce-desktop-windows
 2. **Clone for first time or update local git repository**. For docker to mount directory when running image, cloned directory must be inside C:\Users\\{user} directory.<br> Issue command: **git clone https://github.com/ecalio07/enron-paper.git**
 3. Open **Docker Terminal(NOT the Winndows Terminal)**, make note docker terminal id. Usually it is (192.168.99.100). 
-4. Run the image: **docker run -p 8888:8888 -v \<cloned enron-paper directory>\:/home/ds/notebooks ecalio07/ia369z:4.0**<br>
-This command will download image ecalio07/ia369z:4.0, if it is not local, copy all content from you local project directory to the docker container (/home/ds/notebooks) and run image in the container.<br> 
+4. Run image to create the container. Enter command in terminal:: **docker run -p 8888:8888 -v \<cloned enron-paper directory>\:/home/ds/notebooks ecalio07/ia369z:4.0**<br>
+This command will download(pull) image ecalio07/ia369z:4.0 automaticamente if not available locally. After that, it will copy all content from you local cloned project directory into the docker container (/home/ds/notebooks) and run image in the container.<br> 
 * Example with **Windows path**: **docker run -p 8888:8888 -v /c/Users/DELL/enron-paper:/home/ds/notebooks ecalio07/ia369z:4.0** 
-5. Open browser, and use the terminal id from step 2, to compose the url: **http://192.168.99.100:8888** and paste it. 
+5. Open browser, and use the terminal id from step 3, to compose the url: **http://192.168.99.100:8888** and paste it. 
 6. Navigate to /deliver folder and run the most recent paper cells.
 
 ### Steps to reproduce via DOCKER on MAC
 1. If you don´t have docker client, please install:
 https://store.docker.com/editions/community/docker-ce-server-ubuntu
 2. **Clone for first time or update local git repository**, preferably under /Users/{user}/ directory.<br> Issue command: **git clone https://github.com/ecalio07/enron-paper.git**
-3. Run the image: **docker run -p 8888:8888 -v \<cloned enron-paper directory>\:/home/ds/notebooks ecalio07/ia369z:4.0**<br>
-This command will download image ecalio07/ia369z:4.0, if it is not local, copy all content from you local project directory to the docker container (/home/ds/notebooks) and run image in the container.<br> 
+3. Run image to create the container. Enter command in terminal: **docker run -p 8888:8888 -v \<cloned enron-paper directory>\:/home/ds/notebooks ecalio07/ia369z:4.0**<br>
+This command will download(pull) image ecalio07/ia369z:4.0 automatically if image is not available locally. After that, it will copy all content from you local cloned project directory into the docker container (/home/ds/notebooks) and run image in the container.<br> 
 **Example in MAC path: docker run -p 8888:8888 -v /Users/marie/enron-paper:/home/ds/notebooks ecalio07/ia369z:4.0**
 4. Go to the browser and paste the following url: **http://localhost:8888**
 5. In jupyter(browser), access file inside folder deliver and following instructions.
@@ -29,10 +30,10 @@ This command will download image ecalio07/ia369z:4.0, if it is not local, copy a
 1. If you don´t have docker client, please install:
 https://store.docker.com/editions/community/docker-ce-server-ubuntu
 2. **Clone for first time or update local git repository**: **git clone https://github.com/ecalio07/enron-paper.git**
-3. Download docker image. Enter command in terminal: **sudo docker pull ecalio07/ia369z:4.0**
-4. Run image to create the container. Enter command: **sudo docker run -d -p 8888:8888 -v \<cloned enron-paper directory>\:/home/ds/notebooks ecalio07/ia369z:4.0**
-5. Go to the browser and paste the following url: **http://localhost:8888**
-6. In jupyter(browser), access file inside folder deliver and following instructions.
+3. Run image to create the container. Enter command in terminal: **sudo docker run -d -p 8888:8888 -v \<cloned enron-paper directory>\:/home/ds/notebooks ecalio07/ia369z:4.0**<br>
+This command will download(pull) image ecalio07/ia369z:4.0 automatically if image is not available locally. After that, it will copy all content from you local cloned project directory into the docker container (/home/ds/notebooks) and run image in the container.<br> 
+4. Go to the browser and paste the following url: **http://localhost:8888**
+5. In jupyter(browser), access file inside folder deliver and following instructions.
 
 
 ==============================< **LOCAL SO WITH ANACONDA** >======================= 
