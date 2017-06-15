@@ -26,7 +26,7 @@ This command will download(pull) image ecalio07/ia369z:4.0 automatically if imag
 4. Go to the browser and paste the following url: **http://localhost:8888**
 5. In jupyter(browser), access file inside folder deliver and following instructions.
 
-### Steps to reproduce via DOCKER on UBUNTU(tested on version 16.04):
+### Steps to reproduce via DOCKER on UBUNTU(tested on version 16.04 lts):
 1. If you don´t have docker client, please install:
 https://store.docker.com/editions/community/docker-ce-server-ubuntu
 2. **Clone for first time or update local git repository**: **git clone https://github.com/ecalio07/enron-paper.git**
