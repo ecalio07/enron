@@ -60,12 +60,12 @@ This command will automatically download (pull) image ecalio07/ia369z:4.0 from D
 ## Steps to reproduce via VirtualBox:
 1. If you don't have VirtualBox installed, please consult url:
 https://www.virtualbox.org/wiki/Downloads
-2. Start Oracle Virtual Machine and donwload the file .OVA [here](https://drive.google.com/file/d/0B4KJCoCOJkpGOEYwYWhPb18ySmM/view?usp=sharing)
+2. Start Oracle Virtual Machine and donwload the file .OVA [here](https://drive.google.com/file/d/0B4KJCoCOJkpGZWlIeFY5Qk1LSFU/view?usp=sharing)
 3. Go to menu File/Import Appliance, and select donwloaded *.OVA.
 4. Start  (VM Ubuntu 16.04_escience) and open a terminal.
-5. Go into the directory enron-paper: **cd ~/notebooks/enron-paper**
+5. Go into the directory enron-paper using terminal: **cd /home/enron/enron-paper**
 6. Verify if git project is udated using (git fetch/git status). If necessary, update from repository.
 7. Inside enron-paper root directory, execute the following command: **jupyter notebook**
-8. Await for the browser to open in the following url : http://localhost:8888. Insert manually if necessary.
+8. Wait for the browser to open in the following url : http://localhost:8888. Insert manually if necessary.
 9. To reproduce the project, follow instructions in the most recent paper into /deliver folder.
  
