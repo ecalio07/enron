@@ -3,7 +3,7 @@ Anaconda 4.3.1(Jupyter Notebook Server 4.3.1, Python 2.7.13, scikit-learn librar
 
 The experiments can be reproduced in three distinct manners: through anaconda installation on local so, through docker, and oracle virtual box. All of the options make use of Jupyter Notebook as their fundamental tool.
 
-**It is advisable to use Docker as the most reliable of the three options, since image environment will be identical to when it was created. If you rather do it without docker, using only  your local SO and anaconda, be aware that other installations you have, such as other python versions, might affect reproducibility. Or if you prefer virtual box, be aware the file is around 4GB and download might  be affected due to internet limitations**.<br>
+**It is advisable to use Docker as the most reliable of the three options, since image environment will be identical to when it was created. If you rather do it without docker, using only  your local SO and anaconda, be aware that other installations you have, such as other python versions, might affect reproducibility. Or if you prefer virtual box, be aware the file is around 2,50 GB and download might  be affected due to internet limitations**.<br>
 
 Find below reproduction steps with ecalio07/ia369z:4.0 image. If you wish, however, to **create and update your own image** based on another, click [here](Create-Update-DockerImage.md) for details.
 
