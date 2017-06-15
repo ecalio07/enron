@@ -6,16 +6,6 @@ The experiments can be reproduced in three distinct manners: through anaconda in
 **It is advisable to use Docker as the most reliable of the three options, since image environment will be identical to when it was created. If you rather do it without docker, using only  your local SO and anaconda, be aware that other installations you have, such as other python versions, might affect reproducibility. Or if you prefer virtual box, be aware the file is around 4GB and download might  be affected due to internet limitations**.<br><br>
 =================================< **DOCKER** >================================= 
 
-### Steps to reproduce via DOCKER on WINDOWS(tested on versions 8 and 10)
-1. For most windows versions, install Docker Tool Box: https://www.docker.com/products/docker-toolbox. For Windows 10 Professional and Enterprise 64-bit: https://store.docker.com/editions/community/docker-ce-desktop-windows
-2. **Clone for first time or update local git repository**. For docker to mount directory when running image, cloned directory must be inside C:\Users\\{user} directory.<br> Issue command: **git clone https://github.com/ecalio07/enron-paper.git**
-3. Open **Docker Terminal(NOT the Windows Terminal)**, make note docker terminal id. Usually it is (192.168.99.100). 
-4. Run image to create the container. Enter command in terminal:: **docker run -p 8888:8888 -v \<cloned enron-paper directory>\:/home/ds/notebooks ecalio07/ia369z:4.0**<br>
-This command will automatically download (pull) image ecalio07/ia369z:4.0 from Docker Hub, if image is not available locally. After that, it will copy all content from you local cloned project directory into the docker container (/home/ds/notebooks) and run image in the container.<br> 
-* Example with **Windows path**: **docker run -p 8888:8888 -v /c/Users/DELL/enron-paper:/home/ds/notebooks ecalio07/ia369z:4.0** 
-5. Open browser, and use the terminal id from step 3, to compose the url: **http://192.168.99.100:8888** and paste it. 
-6. Navigate to /deliver folder and run the most recent paper cells.
-
 ### Steps to reproduce via DOCKER on MAC
 1. If you don´t have docker client, please install:
 https://store.docker.com/editions/community/docker-ce-server-ubuntu
@@ -25,6 +15,16 @@ This command will automatically download (pull) image ecalio07/ia369z:4.0 from D
 **Example in MAC path: docker run -p 8888:8888 -v /Users/marie/enron-paper:/home/ds/notebooks ecalio07/ia369z:4.0**
 4. Go to the browser and paste the following url: **http://localhost:8888**
 5. In jupyter(browser), access file inside folder deliver and following instructions.
+
+### Steps to reproduce via DOCKER on WINDOWS(tested on versions 8 and 10)
+1. For most windows versions, install Docker Tool Box: https://www.docker.com/products/docker-toolbox. For Windows 10 Professional and Enterprise 64-bit: https://store.docker.com/editions/community/docker-ce-desktop-windows
+2. **Clone for first time or update local git repository**. For docker to mount directory when running image, cloned directory must be inside C:\Users\\{user} directory.<br> Issue command: **git clone https://github.com/ecalio07/enron-paper.git**
+3. Open **Docker Terminal(NOT the Windows Terminal)**, make note docker terminal id. Usually it is (192.168.99.100). 
+4. Run image to create the container. Enter command in terminal:: **docker run -p 8888:8888 -v \<cloned enron-paper directory>\:/home/ds/notebooks ecalio07/ia369z:4.0**<br>
+This command will automatically download (pull) image ecalio07/ia369z:4.0 from Docker Hub, if image is not available locally. After that, it will copy all content from you local cloned project directory into the docker container (/home/ds/notebooks) and run image in the container.<br> 
+* Example with **Windows path**: **docker run -p 8888:8888 -v /c/Users/DELL/enron-paper:/home/ds/notebooks ecalio07/ia369z:4.0** 
+5. Open browser, and use the terminal id from step 3, to compose the url: **http://192.168.99.100:8888** and paste it. 
+6. Navigate to /deliver folder and run the most recent paper cells.
 
 ### Steps to reproduce via DOCKER on UBUNTU(tested on version 16.04 lts):
 1. If you don´t have docker client, please install:
