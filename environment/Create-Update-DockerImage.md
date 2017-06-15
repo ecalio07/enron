@@ -12,7 +12,7 @@ Ex: ecalio07/ia369z. There's no need to specify the tag, ex (:4.0).
 new image works properly: **docker ps --no-trunc -q**
 6. Make not of the long container id.
 7. Enter docker prompt editor: **docker exec -it \<container id\> bash**
-8. Make your personal installations like: pip install -U scikit-learn, etc.
+8. Make your personal installations or updates like: **pip install -U scikit-learn**, etc.
 9. Exit image prompt: **Ctrl+p ctrl+q**
 10. Container should still be running. Verify it with: **docker ps**
 11. Generate new image from the running updated container: **docker commit \<longID\> \<new-image-name\>**.<br>
