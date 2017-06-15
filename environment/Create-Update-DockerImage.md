@@ -22,6 +22,6 @@ Example: **docker commit eee576806d5bb1500154a712867f7f2004e5fcc10a4c9e76806f4e6
 14. Run newly created image:<br>
 **docker run -p 8888:8888 -v \<git cloned diretory path\>:/home/ds/notebooks \<new-image-name\>**
 15. Verify through browser it is working(docker terminal ip address + port number): **http://192.168.99.100:8888**
-16. Login into Docker Hub: **docker login --username=\<yourdockerhubuser\> --email=\<emaildockerhub\>
-17. **docker push \<new-image-name\>**
+16. Login into Docker Hub: **docker login --username=\<yourdockerhubuser\> --email=\<emaildockerhub\>**
+17. Upload image to Docker Hub: **docker push \<new-image-name\>**
 18. Go to docker hub repository and verify on TAG tab that image was uploaded successfully.
