@@ -5,6 +5,9 @@
 No início comecei instalando cada ferramenta individualmente (git, python, jupyter) mas tive problemas de compatibilidade de versãoes com scikit-learn e outras bibliotecas. Aconselho a instalaçao do Anaconda diratemente. 
 Recomendo o uso do Anaconda, por disponibilizar o python, Jupyter Notebook, git, Spider e outros, tudo através de uma instalação simples e com ferramentas poderosas.
 
+**Recomendations(Dos and Don'ts):**
+* Do: Prefer installing Anaconda, whenever is possible, rather than installing each library individually, for this will prevent compatibility issues. 
+
  
 ## Jupyter Notebook:
 Excellente ferramenta para reprodutibilidade.
@@ -15,7 +18,7 @@ cd C:\Users\DELL\Projetos\enron-paper
 C:\Users\DELL\Projetos\enron-paper> jupyter notebook
 
 **Recomendations(Dos and Don'ts):**
-* Do: start 
+* Do: Version Jupyter Notebook files. You can use version names directly and use git version than  keeping the same name and specify changes in commit messages 
 * Don´t: chunk all your code in just one cell. It is better to use other cells split per modules. It is easier to understand the code.
 
 ## Docker:
