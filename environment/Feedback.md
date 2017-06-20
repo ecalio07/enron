@@ -15,7 +15,7 @@ upgraded to 0.18 and 3.2 respectively and a new image was created.
 third classroom feedback:
 * docker was also tested on MAC, and it was reproduced successfully by Mariana.
 * reproduction steps were updated and it was included new steps for MAC OS
-* improved explation on some sections such as dataset, third party libraries
+* improved explation on some sections such as introduction, dataset, third party libraries
 * adaptation of script to generate pdf with automated references.
 
 
