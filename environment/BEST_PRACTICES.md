@@ -14,7 +14,7 @@ Perdi certo tempo também insistindo em configurar um diretório padrão para in
 cd C:\Users\DELL\Projetos\enron-paper
 C:\Users\DELL\Projetos\enron-paper> jupyter notebook
 
-**Recomendations (Dos and Don'ts)**
+**Recomendations(Dos and Don'ts):**
 * Do: start 
 * Don´t: chunk all your code in just one cell. It is better to use other cells split per modules. It is easier to understand the code.
 
