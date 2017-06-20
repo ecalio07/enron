@@ -1,0 +1,523 @@
+
+% Default to the notebook output style
+
+    
+
+
+% Inherit from the specified cell style.
+
+
+
+
+    
+\documentclass[11pt]{article}
+
+    
+    
+    \usepackage[T1]{fontenc}
+    % Nicer default font than Computer Modern for most use cases
+    \usepackage{palatino}
+
+    % Basic figure setup, for now with no caption control since it's done
+    % automatically by Pandoc (which extracts ![](path) syntax from Markdown).
+    \usepackage{graphicx}
+    % We will generate all images so they have a width \maxwidth. This means
+    % that they will get their normal width if they fit onto the page, but
+    % are scaled down if they would overflow the margins.
+    \makeatletter
+    \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth
+    \else\Gin@nat@width\fi}
+    \makeatother
+    \let\Oldincludegraphics\includegraphics
+    % Set max figure width to be 80% of text width, for now hardcoded.
+    \renewcommand{\includegraphics}[1]{\Oldincludegraphics[width=.8\maxwidth]{#1}}
+    % Ensure that by default, figures have no caption (until we provide a
+    % proper Figure object with a Caption API and a way to capture that
+    % in the conversion process - todo).
+    \usepackage{caption}
+    \DeclareCaptionLabelFormat{nolabel}{}
+    \captionsetup{labelformat=nolabel}
+
+    \usepackage{multicol}
+    \usepackage{adjustbox} % Used to constrain images to a maximum size 
+    \usepackage{xcolor} % Allow colors to be defined
+    \usepackage{enumerate} % Needed for markdown enumerations to work
+    \usepackage{geometry} % Used to adjust the document margins
+    \usepackage{amsmath} % Equations
+    \usepackage{amssymb} % Equations
+    \usepackage{textcomp} % defines textquotesingle
+    % Hack from http://tex.stackexchange.com/a/47451/13684:
+    \AtBeginDocument{%
+        \def\PYZsq{\textquotesingle}% Upright quotes in Pygmentized code
+    }
+    \usepackage{upquote} % Upright quotes for verbatim code
+    \usepackage{eurosym} % defines \euro
+    \usepackage[mathletters]{ucs} % Extended unicode (utf-8) support
+    \usepackage[utf8x]{inputenc} % Allow utf-8 characters in the tex document
+    \usepackage{fancyvrb} % verbatim replacement that allows latex
+    \usepackage{grffile} % extends the file name processing of package graphics 
+                         % to support a larger range 
+    % The hyperref package gives us a pdf with properly built
+    % internal navigation ('pdf bookmarks' for the table of contents,
+    % internal cross-reference links, web links for URLs, etc.)
+    \usepackage{hyperref}
+    \usepackage{longtable} % longtable support required by pandoc >1.10
+    \usepackage{booktabs}  % table support for pandoc > 1.12.2
+    \usepackage[normalem]{ulem} % ulem is needed to support strikethroughs (\sout)
+                                % normalem makes italics be italics, not underlines
+    
+
+    
+    
+    % Colors for the hyperref package
+    \definecolor{urlcolor}{rgb}{0,.145,.698}
+    \definecolor{linkcolor}{rgb}{.71,0.21,0.01}
+    \definecolor{citecolor}{rgb}{.12,.54,.11}
+
+    % ANSI colors
+    \definecolor{ansi-black}{HTML}{3E424D}
+    \definecolor{ansi-black-intense}{HTML}{282C36}
+    \definecolor{ansi-red}{HTML}{E75C58}
+    \definecolor{ansi-red-intense}{HTML}{B22B31}
+    \definecolor{ansi-green}{HTML}{00A250}
+    \definecolor{ansi-green-intense}{HTML}{007427}
+    \definecolor{ansi-yellow}{HTML}{DDB62B}
+    \definecolor{ansi-yellow-intense}{HTML}{B27D12}
+    \definecolor{ansi-blue}{HTML}{208FFB}
+    \definecolor{ansi-blue-intense}{HTML}{0065CA}
+    \definecolor{ansi-magenta}{HTML}{D160C4}
+    \definecolor{ansi-magenta-intense}{HTML}{A03196}
+    \definecolor{ansi-cyan}{HTML}{60C6C8}
+    \definecolor{ansi-cyan-intense}{HTML}{258F8F}
+    \definecolor{ansi-white}{HTML}{C5C1B4}
+    \definecolor{ansi-white-intense}{HTML}{A1A6B2}
+
+    % commands and environments needed by pandoc snippets
+    % extracted from the output of `pandoc -s`
+    \providecommand{\tightlist}{%
+      \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+   
+    % Add ',fontsize=\small' for more characters per line
+    \newenvironment{Shaded}{}{}
+    \newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+    \newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{{#1}}}
+    \newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{{#1}}}}
+    \newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{{#1}}}
+    \newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+    \newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{{#1}}}
+    \newcommand{\RegionMarkerTok}[1]{{#1}}
+    \newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+    \newcommand{\NormalTok}[1]{{#1}}
+    
+    % Additional commands for more recent versions of Pandoc
+    \newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.53,0.00,0.00}{{#1}}}
+    \newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.73,0.40,0.53}{{#1}}}
+    \newcommand{\ImportTok}[1]{{#1}}
+    \newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.73,0.13,0.13}{\textit{{#1}}}}
+    \newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\VariableTok}[1]{\textcolor[rgb]{0.10,0.09,0.49}{{#1}}}
+    \newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+    \newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.40,0.40,0.40}{{#1}}}
+    \newcommand{\BuiltInTok}[1]{{#1}}
+    \newcommand{\ExtensionTok}[1]{{#1}}
+    \newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.74,0.48,0.00}{{#1}}}
+    \newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.49,0.56,0.16}{{#1}}}
+    \newcommand{\InformationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\WarningTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    
+    
+    % Define a nice break command that doesn't care if a line doesn't already
+    % exist.
+    \def\br{\hspace*{\fill} \\* }
+    % Math Jax compatability definitions
+    \def\gt{>}
+    \def\lt{<}
+    % Document parameters
+    
+\title{Fraud Detection Machine Learning on Enron Enteprise Dataset}
+
+    
+    
+\author{Eduardo Calio}
+
+    
+
+    % Pygments definitions
+    
+\makeatletter
+\def\PY@reset{\let\PY@it=\relax \let\PY@bf=\relax%
+    \let\PY@ul=\relax \let\PY@tc=\relax%
+    \let\PY@bc=\relax \let\PY@ff=\relax}
+\def\PY@tok#1{\csname PY@tok@#1\endcsname}
+\def\PY@toks#1+{\ifx\relax#1\empty\else%
+    \PY@tok{#1}\expandafter\PY@toks\fi}
+\def\PY@do#1{\PY@bc{\PY@tc{\PY@ul{%
+    \PY@it{\PY@bf{\PY@ff{#1}}}}}}}
+\def\PY#1#2{\PY@reset\PY@toks#1+\relax+\PY@do{#2}}
+
+\expandafter\def\csname PY@tok@gd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gu\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.50,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@gt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.27,0.87}{##1}}}
+\expandafter\def\csname PY@tok@gs\endcsname{\let\PY@bf=\textbf}
+\expandafter\def\csname PY@tok@gr\endcsname{\def\PY@tc##1{\textcolor[rgb]{1.00,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@cm\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@vg\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@vi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@mh\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@cs\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@ge\endcsname{\let\PY@it=\textit}
+\expandafter\def\csname PY@tok@vc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@il\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@go\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.53,0.53,0.53}{##1}}}
+\expandafter\def\csname PY@tok@cp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.74,0.48,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gh\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@ni\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.60,0.60,0.60}{##1}}}
+\expandafter\def\csname PY@tok@nl\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@no\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.53,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@na\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.49,0.56,0.16}{##1}}}
+\expandafter\def\csname PY@tok@nb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@nd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PY@tok@ne\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.82,0.25,0.23}{##1}}}
+\expandafter\def\csname PY@tok@nf\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@si\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
+\expandafter\def\csname PY@tok@s2\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@nt\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nv\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@s1\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@ch\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@m\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@gp\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@sh\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@ow\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PY@tok@sx\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@bp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@c1\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@o\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@kc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@c\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@mf\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@err\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\fcolorbox[rgb]{1.00,0.00,0.00}{1,1,1}{\strut ##1}}}
+\expandafter\def\csname PY@tok@mb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@ss\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@sr\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
+\expandafter\def\csname PY@tok@mo\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@kd\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@mi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@kn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@cpf\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@kr\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@s\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@kp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@w\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.73,0.73}{##1}}}
+\expandafter\def\csname PY@tok@kt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.69,0.00,0.25}{##1}}}
+\expandafter\def\csname PY@tok@sc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@k\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@se\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sd\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+
+\def\PYZbs{\char`\\}
+\def\PYZus{\char`\_}
+\def\PYZob{\char`\{}
+\def\PYZcb{\char`\}}
+\def\PYZca{\char`\^}
+\def\PYZam{\char`\&}
+\def\PYZlt{\char`\<}
+\def\PYZgt{\char`\>}
+\def\PYZsh{\char`\#}
+\def\PYZpc{\char`\%}
+\def\PYZdl{\char`\$}
+\def\PYZhy{\char`\-}
+\def\PYZsq{\char`\'}
+\def\PYZdq{\char`\"}
+\def\PYZti{\char`\~}
+% for compatibility with earlier versions
+\def\PYZat{@}
+\def\PYZlb{[}
+\def\PYZrb{]}
+\makeatother
+
+
+    % Exact colors from NB
+    \definecolor{incolor}{rgb}{0.0, 0.0, 0.5}
+    \definecolor{outcolor}{rgb}{0.545, 0.0, 0.0}
+
+
+
+    
+    % Prevent overflowing lines due to hard-to-break entities
+    \sloppy 
+    % Setup hyperref package
+    \hypersetup{
+      breaklinks=true,  % so long urls are correctly broken across lines
+      colorlinks=true,
+      urlcolor=urlcolor,
+      linkcolor=linkcolor,
+      citecolor=citecolor,
+      }
+    % Slightly bigger margins than the latex defaults
+    
+    \geometry{verbose,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+    
+
+    \begin{document}
+    
+
+    
+    \maketitle
+    
+   
+   
+    \begin{multicols}{2}
+    \subsection{Abstract}\label{abstract}
+  
+All through history, corruption and fraud has been present. It is known
+cases in which one book author published its book in the name of a more
+famous one. The fraud was detected by the use of Machine Learning. In
+such contexts, it is difficult, if not impossible, to find efficient
+patterns without making use of Artificial Inteligence (AI). And since
+Machine Learning has become a buzzword and has proven its efficiency.
+This work explores a subfield of AI called Supervised Classificaton.
+
+This paper covers Naive Bayes, Support Vector Mahcine (SVM), and
+Decision Tree supervised classification algorithms, working on a
+pre-processed list of email texts based on the Enron Corporation
+dataset. As such, they will predict email authors by their writting
+style and content of words
+
+The purpose of this work is to understand complexity, strengths,
+weaknessess and how to improve accuracy and performance of the
+algorithms mentioned above.
+
+It is holped this study will guide practicioners to manage these
+techniques to reach their expected results.
+
+\textbf{Keywords:} Machine Learning, Classification, Support Vector
+Machines, Gaussian Naive Bayes, Decision Trees, GridSearch.
+
+\subsection{Introduction}\label{introduction}
+
+Enron was founded in 1985 through the merger of an Omaha-based natural
+gas pipeline company (InterNorth) and a Texas pipeline company (Houston
+Natural Gas). Within a decade, Enron had evolved beyond energy trading,
+become a conglomerate that was also actively involved in the area of
+metals, pulps and paper, broadband assets, water plants internationally
+and also traded extensively in financial markets for the same products
+and services (Healy \& Palepu, 2003). This massive expansion generated
+revenues of \$ 4.6 billion in 1990, to revenues of \$101 billion in
+2000. That, in turn, made Enron the seventh largest company in the
+United States, bigger than IBM or Sony. Enron executives landed on the
+covers of business magazines, and the company was hailed as a model for
+success and innovation \cite{davis2007social}.
+
+In order to keep appeasing the investors to create a consistent
+profiting situation in the company, Enron traders were pressured to
+forecast high future cash flows and low discount rate on the long-term
+contract with Enron. It was also common to hide the debt since high debt
+levels would lower the investment grade and trigger banks to recall
+money. The lack of truthfulness by management about the health of the
+company, according to Kirk Hanson, the executive director of the
+Markkula Center for Applied Ethics was the cause of Enron's bankruptcy
+\cite{li2010case}.
+
+At the end of 2001, the company's corruption emmerged as a great fraud
+scandal and soon after this the company filed for bankruptcy. After
+that, many rules and regulations were changed to be able to audit and
+prenvent cases like this one.
+
+This scandal brought into question the accounting practices and
+activities of many corporations in the United States and many rules and
+regulations were changed to be able to audit and prenvent cases like
+this one. And many started to wonder how such a powerful business
+disintegrated so quickly and how it managed to fool the regulators for
+so long.
+
+Due to this interesting case, the company's financial and emails data
+became public for studies purpose. And this case became a point of
+interest for machine learning analysis because it could assist in
+finding solutions on how to prevent similar situations to happen.
+
+    \subsection{Data Source}\label{data-source}
+
+The original dataset is available at
+https://www.cs.cmu.edu/\textasciitilde{}./enron, and it was collected
+and prepared by the CALO Project, and contains financial data and text
+features, that were extracted from emails comprised of 146 users with 21
+features each.
+
+For the experiments in this paper though, two other datasets will be
+used as the data sources: \textbf{word\_data.pkl} corresponding to the
+\textbf{features}, and \textbf{email\_authors.pkl} to the
+\textbf{labels}. They were created by Katie Malone for Udacity machine
+learning training course, and represent 8.000 emails per user, belonging
+to two users: Chris and Sara. It is not entirely clear how data was
+developed, and not easy to understand how contents are linked by simply
+opening the files.
+
+    \subsection{Related Works}\label{related-works}
+
+This research is based on the instructions presented et al.
+\cite{Udacity}, which covers several machine learning techniques. Degis
+et al. \cite{mdegis} presents an code develoments for training
+classifiers to identify authors by emails, also based on Udacity
+Training Course.
+
+    \subsection{Methodology}\label{methodology}
+
+Three different classifiers will be trainned to predict autors emails by
+their word content and style, using scikit-lean library \cite{scikit}.
+
+For performing the experiments, estimators will have their parameters
+tunned by the use of scikit-learn GridSearchCV library \cite{gsearch},
+that considers all parameter combinations and provide outputs of their
+scores. Each experiment can be executed against only a portion or full
+dataset. They are represented by two running code cells (for each
+algorithm). Partial dataset is intended to speed up results so as to
+focus on finding the parameters values combinations, while fulll dataset
+is meant to verify how well estimators perform in a larger scale.
+
+    \subsubsection{SVM}\label{svm}
+
+Support Vector Machine can work with classification or regression, but
+it is mostly applied to classification. While Support Vectors are the
+co-ordinates of individual observation, Support Vector Machine is a
+frontier which best segregates two classes. It has a feature that igores
+the outliers and tend to be quite robust with them. \textbf{C:} controls
+the tradeoff between smooth decision boundary and classification
+training points correctly. In theory, a large value of C means that you
+will get more training points correctly. \textbf{gamma:} defines how far
+a the influence of a single training example reaches. If gamma has a low
+value, every point has a far reach. If gamma has a high value, each
+training example has a close reach. High value might make the decision
+boundary less linear, for it will be closer to training points.
+\textbf{kernel} parameter can be `linear', `poly', `rbf', `sigmoid',
+`precomputed' or a callable. If none is given, `rbf' will be used.
+GridSearch will make testes making combinations with different parameter
+and values: kernel: rbf and linear gamma: 1e-3, 1e-4, C: 1, 10, 100,
+1000
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor} }]:} \PY{c+c1}{\PYZsh{} RUN CODE WITH REDUCED DATASET}
+        \PY{o}{\PYZpc{}}\PY{k}{run} ../dev/svm\PYZus{}gridsearch.ipynb
+\end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor} }]:} \PY{c+c1}{\PYZsh{} RUN CODE WITH FULL DATASET (AFTER MORE THAN TWO HOURS, IT WAS STILL RUNNING AND DIDN\PYZsq{}T DISPLAY RESULTS)}
+        \PY{o}{\PYZpc{}}\PY{k}{run} ../dev/svm\PYZus{}gridsearch\PYZhy{}fulldataset.ipynb
+\end{Verbatim}
+
+    \subsubsection{GaussianNB (Naive Bayes)}\label{gaussiannb-naive-bayes}
+
+Naive Bayes,based on Bayes' Theorem, works with the assumption of
+independence among predictors. In simple terms, a Naive Bayes classifier
+assumes that the presence of a particular feature in a class is
+unrelated to the presence of any other feature. It uses Posterior
+Probability, giving the rank occurance provided text. In order words, it
+will be trained with frequent texts(features) used by Chris and
+Sarah(labels), and it will calculate the probabily and determine if each
+test email is from Chris or Sara.
+
+It is possible to work with parameters, similarly to SVM, but parameter
+tune for this classifier makes no changes in results. As such,
+GridSearchCV is not applied to this scenario.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor} }]:} \PY{c+c1}{\PYZsh{} RUN CODE WITH REDUCED DATASET}
+        \PY{o}{\PYZpc{}}\PY{k}{run} ../dev/bayes.ipynb
+\end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor} }]:} \PY{c+c1}{\PYZsh{} RUN CODE WITH FULL DATASET}
+        \PY{o}{\PYZpc{}}\PY{k}{run} ../dev/bayes\PYZhy{}fulldataset.ipynb
+\end{Verbatim}
+
+    \subsubsection{Decision Trees}\label{decision-trees}
+
+Decision trees work with classification or regression models, and it
+breaks down a dataset into smaller subsets while at the same time an
+associated decision tree is incrementally developed. The final outcome
+is a tree with decision nodes and leaf nodes.
+
+GridSearchCV will be instatiate with the tree estimator, the parameters
+below and will make the predictions: parameters = \{``criterion'':
+{[}``gini'', ``entropy''{]},``min\_samples\_split'': {[}2, 10,
+20{]},``max\_depth'': {[}None, 2, 5, 10{]}, ``min\_samples\_leaf'':
+{[}1, 5, 10{]},``max\_leaf\_nodes'': {[}None, 5, 10, 20{]}, \}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor} }]:} \PY{c+c1}{\PYZsh{} RUN CODE WITH REDUCED DATASET}
+        \PY{o}{\PYZpc{}}\PY{k}{run} ../dev/decitionTree\PYZus{}gridsearch.ipynb
+\end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor} }]:} \PY{c+c1}{\PYZsh{} RUN CODE WITH FULL DATASET (IT TAKES ALMOST ONE HOUR TO DISPLAY RESULTS)}
+        \PY{o}{\PYZpc{}}\PY{k}{run} ../dev/decitionTree\PYZus{}gridsearch\PYZhy{}fulldataset.ipynb
+\end{Verbatim}
+
+    \subsection{Summury of Results}\label{summury-of-results}
+
+This paper contribution was centered in an automated way to tune
+paramenters through GridSearch, rather than doing manually and traying
+to guess best combinations.
+
+\paragraph{Analysis with Reduced
+DataSet:}\label{analysis-with-reduced-dataset}
+
+With regards to performance, all of experiments were fast, since dataset
+was reduced to 1\%. GridSearch presented best parameter
+(`min\_samples\_split': 2, `max\_leaf\_nodes': None, `criterion':
+`gini', `max\_depth': None, `min\_samples\_leaf': 5) for Decison tree
+with a bad accuracy: around 0.80379. GaussianNB was the only classifier
+to work without paramenters tune in GridSearch, however, it presented
+the best accurace: around 9.91922 GridSearch presented best parameter
+(kernel:rbf, C:1000, gamma: 0.001) for SVM scoring: 0.91772 In this
+scenario, GaussianNB was the simplest and most efficient.
+
+\paragraph{Analysis with Full
+DataSet:}\label{analysis-with-full-dataset}
+
+SVM experiment with combination of params and full dataset either was
+still running after more than two hours or had the screen fronzen and
+did not display any output in more than one attempt. It usually works
+very well in complicated domains but it doesn't perform well in very
+large datasets, for it can become slow and prone to overfitting. At this
+time, results could not be recorded. GaussianNB presented a impressive
+performance in the large dataset, and within less than 8 seconds return
+the high score of 0.973265073948. That was somehow expected, since it is
+not working with combinations of parameters. But still, it is easy to
+implement, efficient and performatic, but it can break for some phrases
+for considering the words individually. Decision Tree experiment was
+with the combination of params in a full dataset reached the best score
+0.979393173198. On the other hand, it was slow and it took almost one
+hour to display the results.
+
+\textbf{Conclusion:} According to these experiemtns, results suggests
+that GaussianNB (Naive Bayes) and Decision Tree would be great options
+to work with larger datasets and meet good accuarcy. GaussianNB was much
+superior with regards to performance, but Decision Tree had a slight
+better accuracy.
+
+And due to the lack of performance, SVM is allegedly not a good option
+for working with a large dataset like the one in this paper.
+
+
+    % Add a bibliography block to the postdoc
+    
+\bibliographystyle{plain}
+\bibliography{ref}
+
+    
+     \end{multicols}
+    
+    \end{document}
