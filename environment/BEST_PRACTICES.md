@@ -14,12 +14,14 @@ Excellet tool for reprodutibility. It enable documents to contain both code and 
 Because of the mix of code and text elements, these documents are the ideal place to bring together an analysis description and its results as well as they can be executed perform the data analysis in real time.
 
 **Recomendations(Dos and Don'ts):**
-* Do: Think of import references path just like the terminal path structure. For instance, if you have your running document inside /deliver folder, and you want to import a image from /figures, you have to move one directory up (../) and then enter figures folder: "../figures"
+* Don´t: Mix code and writing directly in you main notebook, it is better to keep notebook codes in separted files to be imported in main notebook by the use of **%run** command. This will import results from other notebooks without importing the code.
+* Do: Think of import references path just like the terminal path structure. For instance, if you have your running document inside /deliver folder, and you want to import a image from /figures, you have to move one directory up **(../)** and then enter figures folder: "../figures"
 * Don´t: chunk all your code in just one cell. It is better to use other cells split per modules. It is easier to understand the code.
-* Do: Prefer to define functions in Jupyter files, whenever is possible, instead of keeping them in python files for later add imports.
-* Don´t: Initalize jupyter from double click on its icon and waist time trying to set up a initial directory for working project. It is simpler to start jupyter from terminal, by typing "jupyter notebook", after entering the directory you wish. Notebook will consider the location you initialized the tool as the root of the project.
+* Do: Prefer to **define functions in Jupyter files**, whenever is possible, instead of keeping them in python files for later add imports.
+* Don´t: Initalize jupyter from double click on its icon and waist time trying to set up a initial directory for working project. It is simpler to start jupyter from terminal, by typing **"jupyter notebook"**, after entering the directory you wish. Notebook will consider the location you initialized the tool as the root of the project.
 * Do: Prefer to have a markdown cell to highligh a portion of the code explanation, rather than having a big cell with a lot of comments. Long comments might not be noticed, for it can be boring to read.
 * Do: Version Jupyter Notebook files using names directly and through git versioning to specifying changes in commit messages
+* Do: Use directory organization: Data (for datasets), Deliver(notebooks to deliver), Dev(notebooks with codes to be imported by main notebook in /deliver folder), Figures (to hold images).
 
 
 ## Docker:
@@ -50,5 +52,6 @@ I should have created a new branch for big changes.
 
 **Recomendations(Dos and Don'ts):**
 * Do: Create a new branch when making huge changes of code, or changing core functionalities.
+* Do: Each data scientists, when working in a team, has dev branch that they push to daily. Then, merge to master via pull request
 * Don´t: Acumulate to many changes for one solo commit. For if you have to retroced the commit because of one small mistake, you will endup lossing all the other sucessful changes.
 * Do: Commit meaninful messages to commit. It will be a precious remminder when looking at the history log.
