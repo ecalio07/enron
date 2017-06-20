@@ -17,8 +17,16 @@ C:\Users\DELL\Projetos\enron-paper> jupyter notebook
 
 ### Docker:
 Exige uma curva de aprendizado, mas garante a reprodutibilidade. Execente para trabalhar em conjunto com o Jupyter.
-Aconselho o uso de uma imagem que já possue o anaconda instalado: dataquestio/python2-starter
+Used image with python, jupyter, skitlearn installed: dataquestio/python2-starter
+
 Utilização do Docker Hub como repositório de imagens. Conclui então que como a diferença da imagem original para a que eu havia alterado era apenas os dados (.ipynb, py files), resolvi não mais criar imagem nova e armazená-la no Docker Hub, mas simplesmente utilizar a imagem já existente juntamente com os dados do meu projeto clonados do GitHub.
+
+Pickle security issue problem on docker in windows.
+
 
 ### VirtualBox (VM)
 Simples e muito bom para garantir reprodutibilidade. Porém, esta opção talvez não seja a melhor, justamente pelo tamanho do arquivo. Por ter mais de 3GB, ficou inviável armazená-lo no GitHub.Tive que utilizar o Google Drive, que embora me permita compartilhar a pasta, está atrelado a uma conta particular.
+
+### Git (tool) and GitHub (repository):
+Organized commits and the use branches, expecially if you have to do many changes in code. In my first code version, parameters tunning were manual. Then I made changes to use GridSearh and code stopped working because of sckitlearn version and other compatibility issues.
+I should have created a new branch for big changes.
