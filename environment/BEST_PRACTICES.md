@@ -18,8 +18,9 @@ cd C:\Users\DELL\Projetos\enron-paper
 C:\Users\DELL\Projetos\enron-paper> jupyter notebook
 
 **Recomendations(Dos and Don'ts):**
-* Do: Version Jupyter Notebook files. You can use version names directly and use git version than  keeping the same name and specify changes in commit messages 
+* Do: Version Jupyter Notebook files. You can use version names directly and use git versioning to specifying changes in commit messages 
 * Don´t: chunk all your code in just one cell. It is better to use other cells split per modules. It is easier to understand the code.
+* Do: Prefer to define functions in Jupyter files, whenever is possible, instead of keeping them in python files for later add imports.
 
 ## Docker:
 Exige uma curva de aprendizado, mas garante a reprodutibilidade. Execente para trabalhar em conjunto com o Jupyter.
