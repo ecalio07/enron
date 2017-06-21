@@ -17,8 +17,8 @@ https://store.docker.com/editions/community/docker-ce-desktop-mac
 This command will automatically download (pull) image ecalio07/ia369z:4.0 from Docker Hub, if image is not available locally. After that, it will copy all content from you local cloned project directory into the docker container (/home/ds/notebooks) and run image in the container.<br> 
 **Example in MAC path: sudo docker run -p 8888:8888 -v /Users/marie/enron-paper:/home/ds/notebooks ecalio07/ia369z:4.0**
 4. Go to the browser and paste the following url: **http://localhost:8888**
-5. In jupyter(browser), access file inside folder deliver and following instructions.
-** ps: if jupyter notebook opens with no folders or folders different from the project you expect, please verify your local path, right after "-v" parameter for the run command **
+5. In jupyter(browser), access file inside folder deliver and following instructions.<br>
+**ps: if jupyter notebook opens with no folders or folders different from the project you expect, please verify your local path, right after "-v" parameter for the run command**
 
 ## Steps to reproduce via DOCKER on WINDOWS (tested on versions 8 and 10)
 1. For most windows versions, install Docker Tool Box: https://www.docker.com/products/docker-toolbox. For Windows 10 Professional and Enterprise 64-bit: https://store.docker.com/editions/community/docker-ce-desktop-windows
@@ -28,8 +28,8 @@ This command will automatically download (pull) image ecalio07/ia369z:4.0 from D
 This command will automatically download (pull) image ecalio07/ia369z:4.0 from Docker Hub, if image is not available locally. After that, it will copy all content from you local cloned project directory into the docker container (/home/ds/notebooks) and run image in the container.<br> 
 * Example with **Windows path**: **docker run -p 8888:8888 -v /c/Users/DELL/enron-paper:/home/ds/notebooks ecalio07/ia369z:4.0** 
 5. Open browser, and use the terminal ip address from step 3, to compose the url: **http://192.168.99.100:8888** and paste it. 
-6. Navigate to /deliver folder and run the most recent paper cells.
-** ps: if jupyter notebook opens with no folders or folders different from the project you expect, please verify your local path, right after "-v" parameter for the run command **
+6. Navigate to /deliver folder and run the most recent paper cells.<br>
+**ps: if jupyter notebook opens with no folders or folders different from the project you expect, please verify your local path, right after "-v" parameter for the run command**
 
 ## Steps to reproduce via DOCKER on UBUNTU (tested on version 16.04 LTS):
 1. If you don´t have docker client, please install:
@@ -38,8 +38,8 @@ https://store.docker.com/editions/community/docker-ce-server-ubuntu
 3. Run image to create the container. Enter command in terminal: **sudo docker run -d -p 8888:8888 -v \<cloned enron-paper directory>\:/home/ds/notebooks ecalio07/ia369z:4.0**<br>
 This command will automatically download (pull) image ecalio07/ia369z:4.0 from Docker Hub, if image is not available locally. After that, it will copy all content from you local cloned project directory into the docker container (/home/ds/notebooks) and run image in the container.<br> 
 4. Go to the browser and paste the following url: **http://localhost:8888**
-5. In jupyter(browser), access file inside folder deliver and following instructions.
-** ps: if jupyter notebook opens with no folders or folders different from the project you expect, please verify your local path, right after "-v" parameter for the run command **
+5. In jupyter(browser), access file inside folder deliver and following instructions.<br>
+**ps: if jupyter notebook opens with no folders or folders different from the project you expect, please verify your local path, right after "-v" parameter for the run command**
 
 ==============================< **LOCAL SO WITH ANACONDA** >======================= 
 
