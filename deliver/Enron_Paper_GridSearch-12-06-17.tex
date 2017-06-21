@@ -70,11 +70,12 @@
    \renewcommand{\abstracttextfont}{\normalfont\tiny}    
   
   \usepackage{titling}
+\setlength{\droptitle}{-6em}
   \newcommand{\subtitle}[1]{%
   \posttitle{%
     \par\end{center}
     \begin{center}\large#1\end{center}
-    \vskip0.5em}%
+   }%
    }
 
     
@@ -154,7 +155,7 @@
     
 \title{Fraud Detection Machine Learning on Enron Dataset}
 
-    
+ 
     
 \author{Eduardo A. R. Calió}
 
@@ -286,7 +287,7 @@
     
     
     \maketitle
-  
+
 \begin{footnotesize}
 \textbf{Abstract:} All through history, corruption and fraud has been present. It is known
 cases in which one book author published its book in the name of a more
@@ -413,19 +414,19 @@ boundary less linear, for it will be closer to training points.
 `precomputed' or a callable. If none is given, `rbf' will be used.
 GridSearch will make testes making combinations with different parameter
 and values: kernel: rbf and linear gamma: 1e-3, 1e-4, C: 1, 10, 100,
-1000
+1000\\
 
-    \begin{Verbatim}[commandchars=\\\{\}]
+    
 
-No trained emails for Chris: 7936
+No trained emails for Chris: 7936\\
 No trained emails for Sara: 7884
+\begin{Verbatim}[commandchars=\\\{\}]
+SVM with GridSearchCV and Reduced Dataset: 
 
-SVM with GridSearchCV and Reduced Dataset:
-
-Training time: 0.495 s
+Training time: 0.495 s 
 Predicting time: 0.057 s
 
-No Predicted emails for Chris: 1012
+No Predicted emails for Chris: 1012 
 No Predicted emails for Sara: 746
 
     \end{Verbatim}
