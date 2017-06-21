@@ -5,6 +5,8 @@ The experiments can be reproduced in three distinct manners: through anaconda in
 
 **It is advisable to use Docker as the most reliable of the three options, since image environment will be identical to when it was created. If you rather do it without docker, using only  your local SO and anaconda, be aware that other installations you have, such as other python versions, might affect reproducibility. Or if you prefer virtual box, be aware the file is around 2,50 GB and download might  be affected due to internet limitations**.<br>
 
+**After environment is setup up with the steps below, and before reproduction with Jupyter Notebook begin, it is strongly recommended to test first only the  (%run) cells with comments "REDUCED DATASET" for each type (SVM, BAYES,DECISION TREES). This is because (%run) cells with comment "FULL DATASET" will take long, it might take hours depending on the machine. For that reason, it is best to leave full datasets tests for last.**
+
 Find below reproduction steps with ecalio07/ia369z:4.0 image. If you wish, however, to **create and update your own image** based on another, click [here](Create-Update-DockerImage.md) for details.
 
 =================================< **DOCKER** >================================= 
@@ -17,7 +19,7 @@ https://store.docker.com/editions/community/docker-ce-desktop-mac
 This command will automatically download (pull) image ecalio07/ia369z:4.0 from Docker Hub, if image is not available locally. After that, it will copy all content from you local cloned project directory into the docker container (/home/ds/notebooks) and run image in the container.<br> 
 **Example in MAC path: sudo docker run -p 8888:8888 -v /Users/marie/enron-paper:/home/ds/notebooks ecalio07/ia369z:4.0**
 4. Go to the browser and paste the following url: **http://localhost:8888**
-5. In jupyter(browser), access file inside folder deliver and following instructions.<br>
+5. In jupyter notebook, access most recent ipyng file inside /deliver folder , executing firstly %run cells for reduced datasets.<br>
 **ps: if jupyter notebook opens with no folders or folders different from the project you expect, please verify your local path, right after "-v" parameter for the run command**
 
 ## Steps to reproduce via DOCKER on WINDOWS (tested on versions 8 and 10)
@@ -28,7 +30,7 @@ This command will automatically download (pull) image ecalio07/ia369z:4.0 from D
 This command will automatically download (pull) image ecalio07/ia369z:4.0 from Docker Hub, if image is not available locally. After that, it will copy all content from you local cloned project directory into the docker container (/home/ds/notebooks) and run image in the container.<br> 
 * Example with **Windows path**: **docker run -p 8888:8888 -v /c/Users/DELL/enron-paper:/home/ds/notebooks ecalio07/ia369z:4.0** 
 5. Open browser, and use the terminal ip address from step 3, to compose the url: **http://192.168.99.100:8888** and paste it. 
-6. Navigate to /deliver folder and run the most recent paper cells.<br>
+6. Access most recent ipyng file inside /deliver folder , executing firstly %run cells for reduced datasets.<br>
 **ps: if jupyter notebook opens with no folders or folders different from the project you expect, please verify your local path, right after "-v" parameter for the run command**
 
 ## Steps to reproduce via DOCKER on UBUNTU (tested on version 16.04 LTS):
@@ -38,7 +40,7 @@ https://store.docker.com/editions/community/docker-ce-server-ubuntu
 3. Run image to create the container. Enter command in terminal: **sudo docker run -d -p 8888:8888 -v \<cloned enron-paper directory>\:/home/ds/notebooks ecalio07/ia369z:4.0**<br>
 This command will automatically download (pull) image ecalio07/ia369z:4.0 from Docker Hub, if image is not available locally. After that, it will copy all content from you local cloned project directory into the docker container (/home/ds/notebooks) and run image in the container.<br> 
 4. Go to the browser and paste the following url: **http://localhost:8888**
-5. In jupyter(browser), access file inside folder deliver and following instructions.<br>
+5. In jupyter notebook, access most recent ipyng file inside /deliver folder , executing firstly %run cells for reduced datasets.<br>
 **ps: if jupyter notebook opens with no folders or folders different from the project you expect, please verify your local path, right after "-v" parameter for the run command**
 
 ==============================< **LOCAL SO WITH ANACONDA** >======================= 
@@ -48,14 +50,14 @@ This command will automatically download (pull) image ecalio07/ia369z:4.0 from D
 2. After installation close the terminal and start a new one.
 3. Enter into preferred directoy and issue the command to clone project:**git clone https://github.com/ecalio07/enron-paper.git**
 4. Enter into the newly cloned directory root(c:\xxx\xxx\enron-paper) and issue the command: **jupyter notebook**
-5. In the browser enter url http://localhost:8888 and reproduce the experiments using the most recent file .ipynb within /deliver directory
+5. In the browser enter url http://localhost:8888 and reproduce the experiments using the most recent file .ipynb within /deliver directory, executing firstly %run cells for reduced datasets.<br>
 
 ## Steps to reproduce via Anaconda on Ubuntu:
 1. Download and Install Anaconda 4.3.1 for Python 2.7.13. https://www.continuum.io/downloads . Anaconda will include all packages necessary for this experiment: git, python 2.7, scikit-learn and jupyter notebook.
 2. After installation close the terminal and start a new one.
 3. Enter into preferred directoy and issue the command to clone project:**git clone https://github.com/ecalio07/enron-paper.git** 
 4. Enter into the newly cloned directory root(/home/youruser/notebooks/enron-paper) and issue the command: **jupyter notebook** 
-5. In the browser enter url http://localhost:8888 and reproduce the experiments using the most recent file .ipynb within /deliver directory
+5. In the browser enter url http://localhost:8888 and reproduce the experiments using the most recent file .ipynb within /deliver directory, executing firstly %run cells for reduced datasets.<br>
 
 =================================< **VIRTUALBOX** >=============================
 
@@ -69,5 +71,5 @@ https://www.virtualbox.org/wiki/Downloads
 6. Verify if git project is udated using (git fetch/git status). If necessary, update from repository.
 7. Inside enron-paper root directory, execute the following command: **jupyter notebook**
 8. Wait for the browser to open in the following url : http://localhost:8888. Insert manually if necessary.
-9. To reproduce the project, follow instructions in the most recent paper into /deliver folder.
+9. To reproduce the project, follow instructions in the most recent paper into /deliver folder, executing firstly %run cells for reduced datasets.<br>
  
