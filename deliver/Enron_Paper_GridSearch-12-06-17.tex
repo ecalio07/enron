@@ -65,7 +65,17 @@
     \usepackage{booktabs}  % table support for pandoc > 1.12.2
     \usepackage[normalem]{ulem} % ulem is needed to support strikethroughs (\sout)
                                 % normalem makes italics be italics, not underlines
-    
+   \usepackage{abstract}
+   \renewcommand{\abstractnamefont}{\normalfont\tiny\bfseries}
+   \renewcommand{\abstracttextfont}{\normalfont\tiny}    
+  
+  \usepackage{titling}
+  \newcommand{\subtitle}[1]{%
+  \posttitle{%
+    \par\end{center}
+    \begin{center}\large#1\end{center}
+    \vskip0.5em}%
+   }
 
     
     
@@ -96,7 +106,7 @@
     % extracted from the output of `pandoc -s`
     \providecommand{\tightlist}{%
       \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
-   
+    \DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
     % Add ',fontsize=\small' for more characters per line
     \newenvironment{Shaded}{}{}
     \newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
@@ -142,13 +152,13 @@
     \def\lt{<}
     % Document parameters
     
-\title{Fraud Detection Machine Learning on Enron Enteprise Dataset}
+\title{Fraud Detection Machine Learning on Enron Dataset}
 
     
     
-\author{Eduardo Calio}
+\author{Eduardo A. R. Calió}
 
-    
+ \subtitle{FEEC - University of Campinas (Unicamp)}   
 
     % Pygments definitions
     
@@ -270,19 +280,15 @@
     
     \geometry{verbose,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
     
+    
 
     \begin{document}
     
-
     
     \maketitle
-    
-   
-   
-    \begin{multicols}{2}
-    \subsection{Abstract}\label{abstract}
   
-All through history, corruption and fraud has been present. It is known
+\begin{footnotesize}
+\textbf{Abstract:} All through history, corruption and fraud has been present. It is known
 cases in which one book author published its book in the name of a more
 famous one. The fraud was detected by the use of Machine Learning. In
 such contexts, it is difficult, if not impossible, to find efficient
@@ -294,7 +300,7 @@ This paper covers Naive Bayes, Support Vector Mahcine (SVM), and
 Decision Tree supervised classification algorithms, working on a
 pre-processed list of email texts based on the Enron Corporation
 dataset. As such, they will predict email authors by their writting
-style and content of words
+style and content of words.
 
 The purpose of this work is to understand complexity, strengths,
 weaknessess and how to improve accuracy and performance of the
@@ -303,10 +309,12 @@ algorithms mentioned above.
 It is holped this study will guide practicioners to manage these
 techniques to reach their expected results.
 
-\textbf{Keywords:} Machine Learning, Classification, Support Vector
+\textbf{Keywords:} Machine Learning, Classifier, Support Vector
 Machines, Gaussian Naive Bayes, Decision Trees, GridSearch.
+\end{footnotesize}
+\begin{multicols}{2}
 
-\subsection{Introduction}\label{introduction}
+\section{Introduction}\label{introduction}
 
 Enron was founded in 1985 through the merger of an Omaha-based natural
 gas pipeline company (InterNorth) and a Texas pipeline company (Houston
@@ -348,7 +356,7 @@ became public for studies purpose. And this case became a point of
 interest for machine learning analysis because it could assist in
 finding solutions on how to prevent similar situations to happen.
 
-    \subsection{Data Source}\label{data-source}
+    \section{Data Source}\label{data-source}
 
 The original dataset is available at
 https://www.cs.cmu.edu/\textasciitilde{}./enron, and it was collected
@@ -365,7 +373,7 @@ to two users: Chris and Sara. It is not entirely clear how data was
 developed, and not easy to understand how contents are linked by simply
 opening the files.
 
-    \subsection{Related Works}\label{related-works}
+    \section{Related Works}\label{related-works}
 
 This research is based on the instructions presented et al.
 \cite{Udacity}, which covers several machine learning techniques. Degis
@@ -373,7 +381,7 @@ et al. \cite{mdegis} presents an code develoments for training
 classifiers to identify authors by emails, also based on Udacity
 Training Course.
 
-    \subsection{Methodology}\label{methodology}
+    \section{Methodology}\label{methodology}
 
 Three different classifiers will be trainned to predict autors emails by
 their word content and style, using scikit-lean library \cite{scikit}.
@@ -408,14 +416,31 @@ and values: kernel: rbf and linear gamma: 1e-3, 1e-4, C: 1, 10, 100,
 1000
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor} }]:} \PY{c+c1}{\PYZsh{} RUN CODE WITH REDUCED DATASET}
-        \PY{o}{\PYZpc{}}\PY{k}{run} ../dev/svm\PYZus{}gridsearch.ipynb
-\end{Verbatim}
 
+No trained emails for Chris: 7936
+No trained emails for Sara: 7884
+
+SVM with GridSearchCV and Reduced Dataset:
+
+Training time: 0.495 s
+Predicting time: 0.057 s
+
+No Predicted emails for Chris: 1012
+No Predicted emails for Sara: 746
+
+    \end{Verbatim}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{Enron_Paper_GridSearch-12-06-17_files/Enron_Paper_GridSearch-12-06-17_5_1.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor} }]:} \PY{c+c1}{\PYZsh{} RUN CODE WITH FULL DATASET (AFTER MORE THAN TWO HOURS, IT WAS STILL RUNNING AND DIDN\PYZsq{}T DISPLAY RESULTS)}
-        \PY{o}{\PYZpc{}}\PY{k}{run} ../dev/svm\PYZus{}gridsearch\PYZhy{}fulldataset.ipynb
-\end{Verbatim}
+Best Param: \{'kernel': 'linear', 
+'C': 10\}
+Best Avarage Score: 0.917721518987
+
+    \end{Verbatim}
 
     \subsubsection{GaussianNB (Naive Bayes)}\label{gaussiannb-naive-bayes}
 
@@ -432,15 +457,20 @@ It is possible to work with parameters, similarly to SVM, but parameter
 tune for this classifier makes no changes in results. As such,
 GridSearchCV is not applied to this scenario.
 
-    \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor} }]:} \PY{c+c1}{\PYZsh{} RUN CODE WITH REDUCED DATASET}
-        \PY{o}{\PYZpc{}}\PY{k}{run} ../dev/bayes.ipynb
-\end{Verbatim}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor} }]:} \PY{c+c1}{\PYZsh{} RUN CODE WITH FULL DATASET}
-        \PY{o}{\PYZpc{}}\PY{k}{run} ../dev/bayes\PYZhy{}fulldataset.ipynb
-\end{Verbatim}
+
+No trained emails for Chris: 7936
+No trained emails for Sara: 7884
+
+GaussianNB with Reduced Dataset:
+
+Training time: 0.002 s
+Predicting time: 0.008 s
+
+Total Accuracy: 0.943117178612
+
+    \end{Verbatim}
 
     \subsubsection{Decision Trees}\label{decision-trees}
 
@@ -455,17 +485,38 @@ below and will make the predictions: parameters = \{``criterion'':
 20{]},``max\_depth'': {[}None, 2, 5, 10{]}, ``min\_samples\_leaf'':
 {[}1, 5, 10{]},``max\_leaf\_nodes'': {[}None, 5, 10, 20{]}, \}
 
-    \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor} }]:} \PY{c+c1}{\PYZsh{} RUN CODE WITH REDUCED DATASET}
-        \PY{o}{\PYZpc{}}\PY{k}{run} ../dev/decitionTree\PYZus{}gridsearch.ipynb
-\end{Verbatim}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor} }]:} \PY{c+c1}{\PYZsh{} RUN CODE WITH FULL DATASET (IT TAKES ALMOST ONE HOUR TO DISPLAY RESULTS)}
-        \PY{o}{\PYZpc{}}\PY{k}{run} ../dev/decitionTree\PYZus{}gridsearch\PYZhy{}fulldataset.ipynb
-\end{Verbatim}
 
-    \subsection{Summury of Results}\label{summury-of-results}
+Number of trained emails for Chris: 7936
+Number of trained emails for Sara: 7884
+
+Decision Tree with GridSearchCV
+and Reduced Dataset:
+
+Training time: 3.648 s
+Predicting time: 0.001 s
+
+Number of Predicted emails for Chris 1017
+Number of Predicted emails for Sara 741
+
+    \end{Verbatim}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{Enron_Paper_GridSearch-12-06-17_files/Enron_Paper_GridSearch-12-06-17_11_1.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Best Param: \{'min\_samples\_split': 20,  
+'max\_leaf\_nodes': None, 'criterion': 'gini', 
+'max\_depth': None, 
+'min\_samples\_leaf': 5\}
+Best Avarage Score: 0.79746835443
+
+    \end{Verbatim}
+
+    \section{Summury of Results}\label{summury-of-results}
 
 This paper contribution was centered in an automated way to tune
 paramenters through GridSearch, rather than doing manually and traying
@@ -480,9 +531,9 @@ was reduced to 1\%. GridSearch presented best parameter
 `gini', `max\_depth': None, `min\_samples\_leaf': 5) for Decison tree
 with a bad accuracy: around 0.80379. GaussianNB was the only classifier
 to work without paramenters tune in GridSearch, however, it presented
-the best accurace: around 9.91922 GridSearch presented best parameter
-(kernel:rbf, C:1000, gamma: 0.001) for SVM scoring: 0.91772 In this
-scenario, GaussianNB was the simplest and most efficient.
+the best accurace: around 0.943117178612 GridSearch presented best
+parameter (kernel:rbf, C:1000, gamma: 0.001) for SVM scoring: 0.91772 In
+this scenario, GaussianNB was the simplest and most efficient.
 
 \paragraph{Analysis with Full
 DataSet:}\label{analysis-with-full-dataset}
@@ -509,15 +560,14 @@ superior with regards to performance, but Decision Tree had a slight
 better accuracy.
 
 And due to the lack of performance, SVM is allegedly not a good option
-for working with a large dataset like the one in this paper.
+for working with a large dataset like the one presented in this paper.
 
 
     % Add a bibliography block to the postdoc
     
+    
 \bibliographystyle{plain}
 \bibliography{ref}
 
-    
-     \end{multicols}
-    
+    \end{multicols}
     \end{document}

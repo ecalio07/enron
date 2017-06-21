@@ -1,11 +1,11 @@
 ((*- extends 'article.tplx' -*))
 
 ((* block author *))
-\author{Eduardo Calio}
+\author{Eduardo A. R. Calio}
 ((* endblock author *))
 
 ((* block title *))
-\title{Fraud Detection Machine Learning on Enron Enteprise Dataset}
+\title{Fraud Detection Machine Learning on Enron Dataset}
 ((* endblock title *))
 
 ((* block bibliography *))
