@@ -37,7 +37,7 @@ This command will automatically download (pull) image ecalio07/ia369z:4.0 from D
 1. If you don´t have docker client, please install:
 https://store.docker.com/editions/community/docker-ce-server-ubuntu
 2. **Clone for first time or update local git repository**: **git clone https://github.com/ecalio07/enron-paper.git**
-3. Run image to create the container. Enter command in terminal: **sudo docker run -d -p 8888:8888 -v \<cloned enron-paper directory>\:/home/ds/notebooks ecalio07/ia369z:4.0**<br>
+3. Run image to create the container. Enter command in terminal: **sudo docker run -p 8888:8888 -v \<cloned enron-paper directory>\:/home/ds/notebooks ecalio07/ia369z:4.0**<br>
 This command will automatically download (pull) image ecalio07/ia369z:4.0 from Docker Hub, if image is not available locally. After that, it will copy all content from you local cloned project directory into the docker container (/home/ds/notebooks) and run image in the container.<br> 
 4. Go to the browser and paste the following url: **http://localhost:8888**
 5. In jupyter notebook, access most recent ipyng file inside /deliver folder , executing firstly %run cells for reduced datasets.<br>
