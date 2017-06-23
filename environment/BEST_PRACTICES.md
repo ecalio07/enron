@@ -11,7 +11,7 @@ I would summarize sugestions in this diary as the following High Level Steps:
 2 - Make use of **version control tool** like git, and a **repository** such as GitHub or Bitbucket, for these will be needed to version and share your work.<br>
 3 - In addition to the tools and sharing reproducible components (code, paper, data), you must also **share(guarantee) the reproducible environment**. Docker is a great tool for that, or a hypervisor tool for **Virtual Machines**. <br>
 
-**Obs: Without a container or virtualization, there's no way to "guarantee" reproduction on different environments. However, this word(guarantee) is too strong, because it is not possible to ensure a 100% success, since software also depend of hardware and local memory.
+**Obs: Without a container or virtualization, there's no way to "guarantee" reproduction on different environments. However, this word(guarantee) is too strong, because it is not possible to ensure a 100% success, since software also depend of hardware and local memory.**
 
 Tests were made, without containers, and paper failed to reproduce in a machine where other previous dependencies were already installed such as more than one python versions.
 
