@@ -42,7 +42,7 @@ In summary, I recomend starting by deciding if programing language and datasourc
 * Do: Version Jupyter Notebook files using names directly and through git versioning to specifying changes in commit messages
 * Do: Use directory organization: Data (for datasets), Deliver(notebooks to deliver), Dev(notebooks with codes to be imported by main notebook in /deliver folder), Figures (to hold images).
 
-**Observation:**No Worflow Managing Tools was integrated with Jupyter Notebook, since it wasn't necessary for completing the work and it would much increase complexity.
+**Observation:** No Worflow Managing Tools was integrated with Jupyter Notebook, since it wasn't necessary for completing the work and it would much increase complexity.
 
  
 ## 2 - Git (tool) and GitHub (repository):
