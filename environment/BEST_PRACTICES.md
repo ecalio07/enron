@@ -15,7 +15,7 @@ I would summarize sugestions in this diary as the following High Level Steps:
 
 Tests were made, without containers, and paper failed to reproduce in a machine where other previous dependencies were already installed such as more than one python versions.
 
-For other instructions and detailed reproduction steps, click [here](environment/README.md)<br> 
+For other instructions and detailed reproduction steps, click [here](../environment/README.md)<br> 
 
 
 ## 1 - Jupyter Notebook:
