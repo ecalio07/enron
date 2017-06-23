@@ -85,13 +85,9 @@ A very good Virtualization Tool. I is simple to use and reproduce, but file can 
 
 ## References:
 
-**Jupyter Notebook:**http://jupyter.org/
-**Jupyter Notebook Guide:https:**http://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/
-**Docker:**http://training.play-with-docker.com/
-**Git & GitHub Udacity course:**https://br.udacity.com/course/how-to-use-git-and-github--ud775/
-**Git Documentation:**https://git-scm.com/documentation
-**Virtual Box Best Practices:**http://www.techrepublic.com/blog/10-things/10-ways-to-get-the-most-from-virtualbox/
-
-
-
-
+**Jupyter Notebook:** http://jupyter.org/ <br>
+**Jupyter Notebook Guide:https:** http://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/ <br>
+**Docker:** http://training.play-with-docker.com/ <br>
+**Git & GitHub Udacity course:** https://br.udacity.com/course/how-to-use-git-and-github--ud775/ <br>
+**Git Documentation:** https://git-scm.com/documentation <br>
+**Virtual Box Best Practices:** http://www.techrepublic.com/blog/10-things/10-ways-to-get-the-most-from-virtualbox/ <br>
